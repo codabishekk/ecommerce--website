@@ -1,0 +1,58 @@
+[
+  {
+    "id": "69c0ce825062802bf598da51",
+    "name": "Calgro™ – Nutraceutical Tablets",
+    "images": [
+      "/src/assets/product image/tablet box.png",
+      "/src/assets/product image/tablet box-1.png"
+    ]
+  },
+  {
+    "id": "69c0ce825062802bf598da5e",
+    "name": "Ceramois™ – Ultra Nourishing Moisturizing Lotion",
+    "images": [
+      "/src/assets/PRODUCT HOME IMAGE/lotion.png",
+      "/src/assets/product image/skin care routine -1.png"
+    ]
+  },
+  {
+    "id": "69c0ce825062802bf598da69",
+    "name": "Glazzium™ – Anti-Acne Detoxifying Face Wash",
+    "images": [
+      "/src/assets/PRODUCT HOME IMAGE/glazzium face wash.png",
+      "/src/assets/product image/skin care routine -2.png"
+    ]
+  },
+  {
+    "id": "69c0ce825062802bf598da74",
+    "name": "Uvinor™ – Clear Radiance Skin Brightening Sunscreen SPF 50+",
+    "images": [
+      "/src/assets/PRODUCT HOME IMAGE/Sunscreen2.png",
+      "/src/assets/product image/Sunscreen.png"
+    ]
+  },
+  {
+    "id": "69c0ce835062802bf598da7f",
+    "name": "SertaFree™ – Sertaconazole Nitrate Cream",
+    "images": [
+      "/src/assets/PRODUCT HOME IMAGE/Serta Free.png",
+      "/src/assets/product image/Serta Free.png"
+    ]
+  },
+  {
+    "id": "69c0ce835062802bf598da8a",
+    "name": "Acnevor CN™ – Clindamycin Phosphate & Nicotinamide Gel",
+    "images": [
+      "/src/assets/PRODUCT HOME IMAGE/Acnevor CN.png",
+      "/src/assets/product image/Acnevor CN with Box.png"
+    ]
+  },
+  {
+    "id": "69c0ce835062802bf598da95",
+    "name": "Acnevor™ – Adapalene & Clindamycin Phosphate Gel",
+    "images": [
+      "/src/assets/PRODUCT HOME IMAGE/Acnevor Gel.png",
+      "/src/assets/product image/Acnevor with box.png"
+    ]
+  }
+]

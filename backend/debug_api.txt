@@ -1,0 +1,1110 @@
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-00.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-00.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-00.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-00.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Request: {}
+Request: {}
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-00.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-00.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+>>>>>>> 262cd94e2efe9351d4f132e6c3d184e9b9ab5468
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+>>>>>>> 3a7a97d7b9ad53325b49d2127f1b3b023bffb71f
+=======
+>>>>>>> 333bf0c1c9f1fbcde0b528f7b327f3697b405811
+<<<<<<< HEAD
+Request: {}
+Request: {}
+=======
+>>>>>>> 262cd94e2efe9351d4f132e6c3d184e9b9ab5468
+>>>>>>> bd3f94567bc626ea16e45bee10505a382a237620
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Request: {}
+Request: {}
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async Collection.countDocuments (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\collection.js:521:21)
+    at async model.Query.exec (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongoose\lib\query.js:4726:63)
+    at async Promise.all (index 1)
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-01.wrdq4oa.mongodb.net
+    at Topology.selectServer (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\aim universee\sholash_project\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+>>>>>>> 7746f33a6f58f20beeddd1d0b550eb331fef5133
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+>>>>>>> bf298fa6b10fb603981017ec763ca45ead56b260
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+>>>>>>> 1c39a781617d631d4035ba0bc4e66160aaa0e894
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+Request: {}
+Request: {}
+Request: {"search":"f"}
+Request: {"search":"ff"}
+Request: {"search":"fff"}
+Request: {"search":"fff"}
+Request: {"search":"fff"}
+>>>>>>> 2f1f299d1c007b035efc6cd9f1ad4667581b5f97
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {"search":"d"}
+Request: {"search":"df"}
+Request: {"search":"dfr"}
+Request: {"search":"dfrg"}
+Request: {}
+Request: {}
+Request: {"search":"Glazzium™ – Anti-Acne Detoxifying Face Wash 100ml"}
+Request: {"search":"Acnevor CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Anevor CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aevor CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Avor CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aor CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Ar CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"A CN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"ACN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"AN™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"A™ – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"A – Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"A– Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"A Clindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"AClindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Alindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aindamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Andamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Adamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aamycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Amycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aycin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Acin Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Ain Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"An Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"A Phosphate & Nicotinamide Gel 20g"}
+Request: {"search":"APhosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Ahosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aosphate & Nicotinamide Gel 20g"}
+Request: {"search":"Asphate & Nicotinamide Gel 20g"}
+Request: {"search":"Aphate & Nicotinamide Gel 20g"}
+Request: {"search":"Ahate & Nicotinamide Gel 20g"}
+Request: {"search":"Aate & Nicotinamide Gel 20g"}
+Request: {"search":"Ate & Nicotinamide Gel 20g"}
+Request: {"search":"Ae & Nicotinamide Gel 20g"}
+Request: {"search":"A & Nicotinamide Gel 20g"}
+Request: {"search":"A& Nicotinamide Gel 20g"}
+Request: {"search":"A Nicotinamide Gel 20g"}
+Request: {"search":"ANicotinamide Gel 20g"}
+Request: {"search":"Aicotinamide Gel 20g"}
+Request: {"search":"Acotinamide Gel 20g"}
+Request: {"search":"Aotinamide Gel 20g"}
+Request: {"search":"Atinamide Gel 20g"}
+Request: {"search":"Ainamide Gel 20g"}
+Request: {"search":"Anamide Gel 20g"}
+Request: {"search":"Aamide Gel 20g"}
+Request: {"search":"Amide Gel 20g"}
+Request: {"search":"Aide Gel 20g"}
+Request: {"search":"Ade Gel 20g"}
+Request: {"search":"Ae Gel 20g"}
+Request: {"search":"A Gel 20g"}
+Request: {"search":"AGel 20g"}
+Request: {"search":"Ael 20g"}
+Request: {"search":"Al 20g"}
+Request: {"search":"A 20g"}
+Request: {"search":"A20g"}
+Request: {"search":"A0g"}
+Request: {"search":"Ag"}
+Request: {"search":"A"}
+Request: {}
+Request: {"search":"Calgro™ – Nutraceutical Tablets"}
+Request: {"search":"SertaFree™ – Sertaconazole Nitrate Cream 20g"}
+Request: {"search":"SertaFree™ – Sertaconazole Nitrate Cream 20"}
+Request: {"search":"SertaFree™ – Sertaconazole Nitrate Cream 2"}
+Request: {"search":"SertaFree™ – Sertaconazole Nitrate Cream "}
+Request: {"search":"SertaFree™ – S€ertaconazole Nitrate Cream "}
+Request: {}
+Request: {"search":"2"}
+Request: {}
+Request: {"search":"s"}
+>>>>>>> 031422dd74c26d6dfc6c74a4773979b163b65966
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+>>>>>>> 6d8ea1775877712ad1a2a653ce7a0bf2cc9b5c56
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+>>>>>>> d3d21ed49df100b142e87aed260f2546808501e4
+>>>>>>> a6021d8be5729294676efd13846f848157b4e8d9
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Error: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-02.wrdq4oa.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-qeagwyv-shard-00-02.wrdq4oa.mongodb.net
+    at Topology.selectServer (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:64:5)
+    at listOnTimeout (node:internal/timers:547:9)
+    at process.processTimers (node:internal/timers:521:7)
+    at async tryOperation (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (C:\Users\DELL\Music\Sholash Life Sciences\Sholash-Life-Science\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+>>>>>>> 354f518de4081e61fc988f3d4e8478309a22c429
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c191c890a4c3e4380a59bbb0c5cb6c4ed8f7c619
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+>>>>>>> fa9e439 (feat: add ProductDetail page styling and backend debug utility file)
+>>>>>>> c191c890a4c3e4380a59bbb0c5cb6c4ed8f7c619
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+>>>>>>> 6ac6cca97d1594d66041d87ed7f8e331400e3a92
+Request: {}
+Request: {}
+<<<<<<< HEAD
+=======
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+=======
+>>>>>>> b0c688590d74ea0f53f7a7348506ba2b922ffdb3
+<<<<<<< HEAD
+=======
+>>>>>>> 634a814782b8ea40a45bcdeb8011932cc38fe35a
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+>>>>>>> fdf9356973400f9ce5178c73c191f6e01c1af344
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+=======
+<<<<<<< HEAD
+Request: {}
+Request: {}
+Request: {"search":"c"}
+Request: {"search":"cc"}
+Request: {"search":"c"}
+Request: {}
+Request: {"search":"c"}
+Request: {}
+Request: {}
+Request: {"search":"c"}
+Request: {"search":"ce"}
+Request: {"search":"cer"}
+Request: {"search":"cera"}
+Request: {"search":"ceram"}
+Request: {"search":"ceramo"}
+Request: {"search":"ceramoi"}
+Request: {"search":"ceramoiz"}
+Request: {"search":"ceramoi"}
+Request: {"search":"ceramo"}
+Request: {"search":"ceram"}
+Request: {"search":"cera"}
+Request: {"search":"cer"}
+Request: {"search":"ce"}
+Request: {"search":"c"}
+Request: {}
+Request: {"search":"g"}
+Request: {"search":"glass"}
+Request: {"search":"gla"}
+Request: {"search":"glas"}
+Request: {"search":"gl"}
+Request: {"search":"glaz"}
+Request: {"search":"glazz"}
+Request: {"search":"glas"}
+Request: {"search":"gla"}
+Request: {"search":"glazzi"}
+Request: {"search":"glazziu"}
+Request: {"search":"glazzium"}
+Request: {"search":"glazziu"}
+Request: {"search":"glazzi"}
+Request: {"search":"glazz"}
+Request: {"search":"glaz"}
+Request: {"search":"gla"}
+Request: {"search":"gl"}
+Request: {"search":"g"}
+Request: {}
+Request: {"search":"u"}
+Request: {"search":"un"}
+Request: {"search":"u"}
+Request: {"search":"uv"}
+Request: {"search":"u"}
+Request: {}
+Request: {"search":"g"}
+Request: {"search":"gl"}
+Request: {"search":"gla"}
+Request: {"search":"glaz"}
+Request: {"search":"glazz"}
+Request: {"search":"glazzi"}
+Request: {"search":"glazziu"}
+Request: {"search":"glazzium"}
+=======
+>>>>>>> 77f80e8c534c615e4c38d2e3f9f6013f8a725018
+<<<<<<< HEAD
+Request: {"search":"Acnevor CN"}
+Request: {"search":"Acnevor CN"}
+Request: {}
+Request: {}
+Request: {"search":"a"}
+Request: {"search":"ac"}
+Request: {"search":"acn"}
+Request: {"search":"acne"}
+Request: {"search":"acnev"}
+Request: {"search":"acnevo"}
+Request: {"search":"acnevor"}
+Request: {"search":"acnevor "}
+Request: {"search":"acnevor c"}
+Request: {"search":"acnevor cn"}
+Request: {"search":"acnevor c"}
+Request: {"search":"acnevor "}
+Request: {"search":"acnevor"}
+=======
+>>>>>>> 24efb57409148c92895e34060cc7796731c817cf
+>>>>>>> 34207e66c046d8bce16e155dd1c6f797edb83d17
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}

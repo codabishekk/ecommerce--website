@@ -1,0 +1,103 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modalOverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalContent {
+  background-color: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: var(--admin-shadow-lg);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modalOverlay.active .modalContent {
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title.danger {
+  color: var(--admin-danger);
+}
+
+.message {
+  color: var(--admin-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnCancel {
+  background-color: transparent;
+  border: 1px solid var(--admin-border);
+  color: var(--admin-text-main);
+}
+
+.btnCancel:hover {
+  background-color: var(--admin-surface-hover);
+}
+
+.btnConfirm {
+  background-color: var(--admin-primary);
+  border: none;
+  color: white;
+}
+
+.btnConfirm:hover {
+  opacity: 0.9;
+}
+
+.btnDanger {
+  background-color: var(--admin-danger);
+  border: none;
+  color: white;
+}
+
+.btnDanger:hover {
+  background-color: #DC2626;
+}

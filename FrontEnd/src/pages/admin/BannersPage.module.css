@@ -1,0 +1,559 @@
+/* BannersPage.module.css */
+.bannersPage {
+    padding: 2rem;
+    color: var(--admin-text-main);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.titleInfo h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: var(--admin-text-main);
+}
+
+.titleInfo p {
+    margin: 0.25rem 0 0;
+    color: var(--admin-text-muted);
+}
+
+.btnPrimary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--admin-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--admin-transition);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.btnPrimary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: var(--admin-shadow-md);
+}
+
+/* Controls & Tabs */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tabs {
+    display: flex;
+    background: var(--admin-bg-deep);
+    padding: 0.25rem;
+    border-radius: 10px;
+    border: 1px solid var(--admin-border);
+}
+
+.tab {
+    padding: 0.5rem 1.25rem;
+    border: none;
+    background: transparent;
+    color: var(--admin-text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--admin-transition);
+}
+
+.tab:hover {
+    color: var(--admin-text-main);
+}
+
+.activeTab {
+    background: var(--admin-surface);
+    color: var(--admin-primary) !important;
+    box-shadow: var(--admin-shadow-sm);
+}
+
+/* Table Design */
+.tableCard {
+    background: var(--admin-surface);
+    border-radius: 16px;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-md);
+    overflow: hidden;
+    overflow-x: auto;
+    backdrop-filter: blur(var(--admin-blur));
+}
+
+
+.bannerTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bannerTable th {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    background: var(--admin-bg-deep);
+    color: var(--admin-text-muted);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.bannerTable td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--admin-border);
+    vertical-align: middle;
+}
+
+.bannerCell {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.bannerThumb {
+    width: 120px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--admin-bg-deep);
+    border: 1px solid var(--admin-border);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.bannerThumb:hover {
+    transform: scale(1.05);
+}
+
+.bannerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerTitle {
+    font-weight: 600;
+    color: var(--admin-text-main);
+}
+
+.bannerDesc {
+    font-size: 0.8125rem;
+    color: var(--admin-text-muted);
+}
+
+.linkCell {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: var(--admin-primary);
+}
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.statusActive {
+    background: var(--admin-success-light);
+    color: var(--admin-success);
+}
+
+.statusInactive {
+    background: var(--admin-bg-deep);
+    color: var(--admin-text-muted);
+}
+
+.statusDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.actionBtns {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.actionBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--admin-border);
+    background: var(--admin-surface);
+    color: var(--admin-text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actionBtn:hover {
+    color: var(--admin-primary);
+    border-color: var(--admin-primary);
+    background: var(--admin-primary-light);
+}
+
+.actionBtnDanger:hover {
+    color: var(--admin-danger);
+    border-color: var(--admin-danger);
+    background: var(--admin-danger-light);
+}
+
+/* Modal Styling */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modalContent {
+    background: var(--admin-bg-base);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: var(--admin-shadow-lg);
+    max-height: 90vh; /* This constrains the modal height */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--admin-border);
+    overflow: hidden;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden; /* This is key to constrain the flex children */
+}
+
+.modalHeader {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--admin-bg-deep);
+}
+
+.modalHeader h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--admin-text-main);
+}
+
+.modalCloseBtn {
+    background: var(--admin-bg-base);
+    border: 1px solid var(--admin-border);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--admin-text-muted);
+    transition: all 0.2s;
+}
+
+.modalCloseBtn:hover {
+    color: var(--admin-danger);
+    background: var(--admin-danger-light);
+    border-color: var(--admin-danger);
+}
+
+.modalBody {
+    padding: 1.5rem;
+    overflow-y: auto; /* Handles the scroll if content is too tall */
+    background: var(--admin-bg-base);
+    flex: 1; /* Makes the body take up the available form space */
+}
+
+.formGroup {
+    margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--admin-text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.formGroup input, .formGroup select, .formGroup textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    background: var(--admin-bg-deep);
+    color: var(--admin-text-main);
+    transition: all 0.2s;
+}
+
+.formGroup input:focus, .formGroup select:focus, .formGroup textarea:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    background: var(--admin-bg-base);
+    box-shadow: 0 0 0 4px var(--admin-primary-light);
+}
+
+.imageUploadArea {
+    border: 2px dashed var(--admin-border);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--admin-bg-deep);
+}
+
+.imageUploadArea:hover {
+    border-color: var(--admin-primary);
+    background: var(--admin-primary-light);
+}
+
+.imageUploadArea p {
+    margin-top: 0.75rem;
+    color: var(--admin-text-main);
+    font-weight: 500;
+}
+
+.previewContainer {
+    margin-top: 1rem;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.previewContainer img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.removeImage {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: var(--admin-danger);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.removeImage:hover {
+    transform: scale(1.1);
+}
+
+.modalFooter {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    background: var(--admin-bg-deep);
+    flex-shrink: 0; /* Ensures the footer doesn't get squeezed */
+}
+
+.btnCancel {
+    padding: 0.75rem 1.5rem;
+    background: var(--admin-bg-base);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--admin-text-main);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnCancel:hover {
+    background: var(--admin-surface-hover);
+}
+
+.btnSave {
+    padding: 0.75rem 1.75rem;
+    background: var(--admin-primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.btnSave:hover {
+    filter: brightness(1.1);
+}
+
+.btnSave:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading, .emptyState {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--admin-text-muted);
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.emptyState h3 {
+    color: var(--admin-text-main);
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Image Preview Overlay (for clicking table thumbnails) */
+.imagePreviewOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.2s ease;
+}
+
+.imagePreviewContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.previewCloseBtn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.previewImageLarge {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .bannersPage {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btnPrimary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .modalOverlay {
+        padding: 0;
+        align-items: flex-start;
+        top: calc(var(--admin-topbar-h) + 2rem);
+        padding-bottom: 2rem;
+    }
+
+    .modalContent {
+        max-width: 100%;
+        margin: 1rem;
+        max-height: calc(100vh - var(--admin-topbar-h) - 4rem);
+        border-radius: 16px;
+    }
+
+    .modalHeader {
+        padding: 1rem 1.25rem;
+    }
+
+    .modalBody {
+        padding: 1.25rem;
+    }
+
+    .modalFooter {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .modalFooter button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .imageUploadArea {
+        padding: 1.5rem 1rem;
+    }
+
+    .previewContainer img {
+        height: 140px;
+    }
+}

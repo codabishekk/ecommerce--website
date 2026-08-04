@@ -1,0 +1,58 @@
+.chartCard {
+  background: var(--admin-surface);
+  backdrop-filter: blur(var(--admin-blur));
+  -webkit-backdrop-filter: blur(var(--admin-blur));
+  border: 1px solid var(--admin-border);
+  border-radius: 16px;
+  box-shadow: var(--admin-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all var(--admin-transition);
+}
+
+.chartCard:hover {
+  box-shadow: var(--admin-shadow-md);
+  transform: translateY(-2px);
+}
+
+.header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--admin-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--admin-text-main);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.body {
+  padding: 1.5rem;
+  flex: 1;
+  min-height: 300px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .body {
+    padding: 0.75rem;
+    min-height: 230px;
+  }
+  
+  .title {
+    font-size: 0.875rem;
+  }
+}

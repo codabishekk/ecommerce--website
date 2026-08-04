@@ -1,0 +1,182 @@
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.splash-screen.exit {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 300px;
+    width: 100%;
+}
+
+.splash-logo-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: splashSlowFadeIn 1.5s ease-out forwards;
+}
+
+.splash-s-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.08));
+    animation: splashScaleUp 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.splash-branding {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: splashTextSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+.splash-brand-name {
+    font-family: 'Playfair Display', serif; /* Or system serif if not loaded */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.splash-brand-tagline {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #94a3b8; /* Light Grey */
+    margin-top: 0.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.splash-loading {
+    width: 120px;
+    height: 2px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: splashFadeIn 0.5s ease 1.5s forwards;
+}
+
+.splash-loader-line {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #1e40af, #10b981); /* Match the logo gradient */
+    animation: splashLoadingProgress 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Animations */
+@keyframes splashSlowFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes splashScaleUp {
+    from { transform: scale(0.9) translateY(10px); }
+    to { transform: scale(1) translateY(0); }
+}
+
+@keyframes splashTextSlideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes splashFadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes splashLoadingProgress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes splashFloat {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes splashGlow {
+    from { opacity: 0.2; transform: scale(0.9); }
+    to { opacity: 0.4; transform: scale(1.15); }
+}
+
+@keyframes splashTextFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes splashProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes blobMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+}
+
+@keyframes pPulse {
+    from { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+    to { transform: translate(-50%, -50%) scale(1.2); opacity: 0.4; }
+}
+
+@keyframes splashFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes splashGlow {
+    from { opacity: 0.3; transform: scale(0.8); }
+    to { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes splashTextFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes splashProgress {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+@keyframes blobMove {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(50px, 30px) rotate(90deg); }
+}
+
+/* Particle Positions */
+.particle.p-0 { top: 20%; left: 10%; animation: pFloat 4s infinite; }
+.particle.p-1 { top: 80%; left: 20%; animation: pFloat 5s infinite 1s; }
+.particle.p-2 { top: 30%; left: 80%; animation: pFloat 6s infinite 0.5s; }
+.particle.p-3 { top: 70%; left: 90%; animation: pFloat 4.5s infinite 1.5s; }
+.particle.p-4 { top: 15%; left: 50%; animation: pFloat 7s infinite 2s; }
+.particle.p-5 { top: 85%; left: 45%; animation: pFloat 5.5s infinite 0.2s; }
+/* ... (simplified for now but works) */
+
+@keyframes pFloat {
+    0%, 100% { transform: translate(0, 0); opacity: 0.2; }
+    50% { transform: translate(20px, -20px); opacity: 0.5; }
+}

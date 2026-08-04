@@ -1,0 +1,129 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  background-color: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+  box-shadow: var(--admin-shadow-sm);
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.userTable th {
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  border-bottom: 1px solid var(--admin-border);
+  background-color: var(--admin-surface-hover);
+  white-space: nowrap;
+}
+
+.userTable td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--admin-border);
+  color: var(--admin-text-main);
+  vertical-align: middle;
+}
+
+.userTable tbody tr:hover {
+  background-color: var(--admin-surface-hover);
+}
+
+.userTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--admin-primary-light);
+  color: var(--admin-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.userMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 600;
+}
+
+.userEmail {
+  font-size: 0.75rem;
+  color: var(--admin-text-muted);
+}
+
+.badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  text-transform: capitalize;
+}
+
+.badge.active {
+  background-color: var(--admin-success-light);
+  color: var(--admin-success);
+}
+
+.badge.blocked {
+  background-color: var(--admin-danger-light);
+  color: var(--admin-danger);
+}
+
+.badge.admin {
+  background-color: var(--admin-primary-light);
+  color: var(--admin-primary);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: var(--admin-text-muted);
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+  background-color: var(--admin-border);
+  color: var(--admin-text-main);
+}
+
+.iconBtn.danger:hover {
+  color: var(--admin-danger);
+  background-color: var(--admin-danger-light);
+}
+
+.iconBtn.warning:hover {
+  color: var(--admin-warning);
+  background-color: var(--admin-warning-light);
+}

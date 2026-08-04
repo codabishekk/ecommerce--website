@@ -1,0 +1,55 @@
+/* Global container */
+.container {
+    padding: 0 12px;
+}
+
+/* Images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons touch-friendly */
+button {
+    min-height: 44px;
+}
+
+/* Text scaling */
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+/* Mobile First (default styles) */
+
+/* Tablet */
+@media (min-width: 768px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: clip;   /* 🔥 prevents side scroll without breaking position: sticky */
+}
+
+/* ROOT APP */
+#root {
+    width: 100%;
+}

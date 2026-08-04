@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('./dashboard-theme.css');
+@import url('./responsive.css');
+
+:root {
+  /* Color Palette - Premium Aquatic Aesthetic */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+
+  /* Deep Blue to Aqua Green */
+  --color-primary-aqua: #0ea5e9;
+  --color-secondary-deep: #0369a1;
+  --color-accent-teal: #14b8a6;
+
+  --color-primary-brand: #00a650;
+  /* Keep legacy for consistency if needed */
+  --color-secondary-brand: #006093;
+
+  /* Refined Text Colors */
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: rgba(226, 232, 240, 0.8);
+
+  /* Sophisticated Gradients */
+  --gradient-ocean: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%);
+  --gradient-deep-sea: linear-gradient(135deg, #075985 0%, #0c4a6e 100%);
+  --gradient-soft-aqua: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
+  --gradient-sholash: linear-gradient(135deg, #eef7f2 0%, #e0f2fe 100%);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Outfit', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Premium Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 50px rgba(14, 165, 233, 0.15);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background-color: var(--color-bg);
+  background-attachment: fixed;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(199, 89%, 48%, 0.05) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(187, 92%, 38%, 0.03) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(199, 89%, 48%, 0.05) 0, transparent 50%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+.serif {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  background: var(--gradient-ocean);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Premium Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-glass);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-aqua);
+  border-radius: 5px;
+  border: 3px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-deep);
+}

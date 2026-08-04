@@ -1,0 +1,118 @@
+/* .product-marquee-section {
+    padding: 6rem 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.marquee-title {
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.marquee-wrapper {
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 3rem;
+    width: fit-content;
+    animation: marquee-scroll 60s linear infinite;
+   
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.33%);
+    }
+}
+
+.marquee-product-card {
+    flex: 0 0 auto;
+    width: 280px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 1.5rem;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.marquee-product-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    background: #ffffff;
+    border-color: var(--color-primary-aqua);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+}
+
+.marquee-image-box {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    border: 1px solid #f1f5f9;
+}
+
+.marquee-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.marquee-product-card:hover .marquee-image-box img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.marquee-info {
+    text-align: center;
+}
+
+.marquee-info .cat {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-primary-aqua);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.marquee-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+@media (max-width: 768px) {
+    .marquee-content {
+        animation: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px;
+    }
+
+    .marquee-product-card {
+        min-width: 220px;
+        scroll-snap-align: center;
+    }
+} */

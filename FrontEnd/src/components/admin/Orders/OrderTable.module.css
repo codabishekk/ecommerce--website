@@ -1,0 +1,142 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.orderTable th {
+  text-align: left;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.orderTable td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--admin-border);
+  color: var(--admin-text-main);
+}
+
+.orderTable tr:last-child td {
+  border-bottom: none;
+}
+
+.orderTable tr:hover td {
+  background-color: var(--admin-surface-hover);
+}
+
+.orderId {
+  color: var(--admin-primary);
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.productCell {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.customerName {
+  color: var(--admin-text-main);
+  font-weight: 500;
+}
+
+.dateCell {
+  color: var(--admin-text-muted);
+}
+
+.amount {
+  font-weight: 700;
+  color: var(--admin-text-main);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusBadge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin-right: 6px;
+}
+
+.pending {
+  background-color: var(--admin-warning-light);
+  color: var(--admin-warning);
+}
+
+.shipped {
+  background-color: var(--admin-primary-light);
+  color: var(--admin-primary);
+}
+
+.delivered {
+  background-color: var(--admin-success-light);
+  color: var(--admin-success);
+}
+
+.cancelled {
+  background-color: var(--admin-danger-light);
+  color: var(--admin-danger);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: var(--admin-text-muted);
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+  background-color: var(--admin-surface-hover);
+  color: var(--admin-text-main);
+}
+
+.emptyState {
+  padding: 4rem;
+  text-align: center;
+  color: var(--admin-text-muted);
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .orderTable th,
+  .orderTable td {
+    padding: 1rem 0.75rem;
+  }
+  
+  .productCell {
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,34 @@
+.chartContainer {
+  height: 280px;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.donutContainer {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .chartContainer {
+    height: 220px;
+  }
+
+  .donutContainer {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartContainer {
+    height: 200px;
+  }
+  
+  .donutContainer {
+    height: 220px;
+  }
+}

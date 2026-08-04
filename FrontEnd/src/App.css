@@ -1,0 +1,43 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 136px;
+  /* 36px TopBar + 100px Header */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 106px;
+    /* 36px TopBar + 70px Header */
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 100px;
+    /* 30px TopBar + 70px Header */
+  }
+
+  .top-bar {
+    height: 30px;
+  }
+}
+.admin-app-container main {
+  padding-top: 0;
+}
+
+/* Base styles for buttons and interactive elements across the app */
+button,
+.btn {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+button:active {
+  transform: scale(0.98);
+}

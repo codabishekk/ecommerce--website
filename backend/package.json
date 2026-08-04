@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Starting frontend build...' && cd ../FrontEnd && echo 'Installing dependencies...' && NODE_OPTIONS=--max-old-space-size=512 npm install && echo 'Running build...' && npm run build && echo 'Build completed successfully'",
+    "postinstall": "echo 'Running postinstall build...' && npm run build",
+    "start": "concurrently \"node server.js\" \"node otp-server.js\"",
+    "start:api": "node server.js",
+    "start:otp": "node otp-server.js",
+    "dev": "concurrently \"nodemon server.js\" \"nodemon otp-server.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^1.41.3",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.0",
+    "multer": "^2.1.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^8.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

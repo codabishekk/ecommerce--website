@@ -1,0 +1,148 @@
+.hero-carousel-wrapper {
+    margin: 20px;
+    margin-top: 10px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #fff;
+}
+
+.hero-slider .slick-slide {
+    outline: none;
+}
+
+.hero-slide-item {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 2;
+}
+
+.carousel-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 5%;
+    width: 100%;
+}
+
+.carousel-text {
+    max-width: 600px;
+}
+
+.carousel-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.offer-desc {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    max-width: 90%;
+}
+
+/* SLICK DOTS FIX */
+.slick-dots {
+    bottom: 30px !important;
+}
+
+.slick-dots li {
+    margin: 0 5px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 10px !important;
+    color: #0B8FAC !important;
+    opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #0B8FAC !important;
+    opacity: 1;
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-slide-item {
+        height: 50vh;
+        min-height: auto;
+    }
+
+    .carousel-text {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .offer-desc {
+        margin: 0 auto 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slide-item {
+        height: 220px;
+    }
+
+    .hero-carousel-wrapper {
+        margin: 10px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .offer-desc {
+        font-size: 0.9rem;
+    }
+    
+    .slick-dots {
+        bottom: 15px !important;
+    }
+}

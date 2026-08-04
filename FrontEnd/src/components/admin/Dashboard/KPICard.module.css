@@ -1,0 +1,87 @@
+.kpiCard {
+  background: var(--admin-surface);
+  backdrop-filter: blur(var(--admin-blur));
+  -webkit-backdrop-filter: blur(var(--admin-blur));
+  border: 1px solid var(--admin-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: var(--admin-shadow-sm);
+  transition: all var(--admin-transition);
+}
+
+.kpiCard:hover {
+  box-shadow: var(--admin-shadow-md);
+  transform: translateY(-2px);
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--admin-text-muted);
+  font-weight: 500;
+}
+
+.value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  line-height: 1.2;
+}
+
+.trend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.trend.positive {
+  color: var(--admin-success);
+}
+
+.trend.negative {
+  color: var(--admin-danger);
+}
+@media (max-width: 768px) {
+  .kpiCard {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .iconWrapper {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  
+  .iconWrapper :global(svg) {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .value {
+    font-size: 1.5rem;
+  }
+  
+  .label {
+    font-size: 0.8rem;
+  }
+}

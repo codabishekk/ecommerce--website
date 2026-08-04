@@ -1,0 +1,94 @@
+.layoutContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--admin-font);
+  background: radial-gradient(ellipse 80% 60% at 10% -10%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 40% at 90% 100%, rgba(124, 58, 237, 0.10) 0%, transparent 60%),
+              linear-gradient(160deg, var(--admin-bg-base) 0%, var(--admin-bg-deep) 100%);
+  background-attachment: fixed;
+  color: var(--admin-text-main);
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Ambient Orbs --- */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  animation: orbDrift 18s ease-in-out infinite alternate;
+  opacity: var(--admin-orb-opacity);
+  will-change: transform;
+}
+
+.orb1 {
+  width: 520px;
+  height: 520px;
+  background: #3B82F6;
+  top: -140px;
+  left: -100px;
+  animation-duration: 22s;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: #7C3AED;
+  bottom: -100px;
+  right: -60px;
+  animation-duration: 17s;
+  animation-delay: -6s;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: #06B6D4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 28s;
+  animation-delay: -12s;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  z-index: 1; /* Above Orbs */
+}
+
+.pageContainer {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 90;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+  
+  .backdrop {
+    display: block;
+  }
+}

@@ -1,0 +1,139 @@
+/* src/dashboard-theme.css */
+
+/* Define light and dark mode variables for the admin dashboard specifically */
+:root {
+  /* Admin Base Colors - Light Mode (Default) */
+  --admin-bg: #F8FAFC;
+  --admin-bg-base: #FFFFFF;
+  --admin-bg-deep: #F8FAFC;
+  --admin-surface: #FFFFFF;
+  --admin-surface-hover: #F1F5F9;
+  
+  --admin-text-main: #0F172A;
+  --admin-text-muted: #64748B;
+  
+  --admin-border: #E2E8F0;
+  
+  --admin-primary: #0EA5E9;
+  --admin-primary-light: #E0F2FE;
+  
+  --admin-success: #10B981;
+  --admin-success-light: #D1FAE5;
+  
+  --admin-warning: #F59E0B;
+  --admin-warning-light: #FEF3C7;
+  
+  --admin-danger: #EF4444;
+  --admin-danger-light: #FEE2E2;
+
+  --admin-sidebar-w: 260px;
+  --admin-topbar-h: 70px;
+  --admin-font: 'Inter', system-ui, sans-serif;
+  
+  --admin-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --admin-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Animation & Glass Tokens */
+  --admin-blur: 20px;
+  --admin-transition: 0.32s cubic-bezier(.4, 0, .2, 1);
+  --admin-orb-opacity: 0.08;
+}
+
+[data-theme='dark'] {
+  /* Admin Base Colors - Dark Mode */
+  --admin-bg: #0F172A;
+  --admin-bg-base: #0F172A;
+  --admin-bg-deep: #020617;
+  --admin-surface: rgba(30, 41, 59, 0.6);
+  --admin-surface-hover: rgba(51, 65, 85, 0.8);
+  
+  --admin-text-main: #F8FAFC;
+  --admin-text-muted: #94A3B8;
+  
+  --admin-border: rgba(255, 255, 255, 0.1);
+  
+  --admin-primary: #38BDF8;
+  --admin-primary-light: rgba(56, 189, 248, 0.2);
+  
+  --admin-success: #34D399;
+  --admin-success-light: rgba(52, 211, 153, 0.2);
+  
+  --admin-warning: #FBBF24;
+  --admin-warning-light: rgba(251, 191, 36, 0.2);
+  
+  --admin-danger: #F87171;
+  --admin-danger-light: rgba(248, 113, 113, 0.2);
+  
+  --admin-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --admin-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --admin-orb-opacity: 0.12;
+}
+
+/* --- Global Admin Animations --- */
+@keyframes orbDrift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(30px, 20px) scale(1.05); }
+}
+
+@keyframes fadeUpIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-fade-in-up {
+  animation: fadeUpIn 0.4s var(--admin-transition) forwards;
+}
+
+.admin-glass {
+  background: var(--admin-surface);
+  backdrop-filter: blur(var(--admin-blur));
+  -webkit-backdrop-filter: blur(var(--admin-blur));
+  border: 1px solid var(--admin-border);
+  transition: all var(--admin-transition);
+}
+
+/* Base resets for dashboard components */
+.admin-card {
+  background-color: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: 16px;
+  box-shadow: var(--admin-shadow-sm);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+  box-shadow: var(--admin-shadow-md);
+}
+
+/* --- Global Admin Scrollbars --- */
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--admin-border);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--admin-primary);
+  background-clip: content-box;
+  border: 1px solid transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--admin-border) transparent;
+}

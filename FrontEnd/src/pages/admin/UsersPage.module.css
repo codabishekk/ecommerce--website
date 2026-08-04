@@ -1,0 +1,56 @@
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  margin: 0;
+  font-family:'Times New Roman';
+}
+
+.title p {
+  font-size: 0.875rem;
+  color: var(--admin-text-muted);
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--admin-surface);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--admin-border);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--admin-shadow-sm);
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--admin-surface-hover);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.searchBox input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  color: var(--admin-text-main);
+}
+
+.searchBox input::placeholder {
+  color: var(--admin-text-muted);
+}

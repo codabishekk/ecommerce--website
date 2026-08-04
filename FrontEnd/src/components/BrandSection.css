@@ -1,0 +1,328 @@
+.brand-section {
+    padding: 120px 0;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.brand-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 40%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: 1;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+    /* transform: rotate(-3deg); */
+    /* transition: transform 0.5s ease; */
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* transition: transform 0.8s ease; */
+}
+
+/* .main-image:hover img {
+    transform: scale(1.1);
+} */
+
+.secondary-image {
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 8px solid #ffffff;
+    z-index: 2;
+}
+
+.secondary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-anim {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Brand Content */
+.brand-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.brand-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(14, 165, 233, 0.08);
+    color: #0ea5e9;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.brand-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #0ea5e9, #2dd4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brand-desc {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: black;
+    max-width: 90%;
+}
+
+.features-grid {
+    display: grid;
+    gap: 30px;
+    margin: 20px 0;
+    
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f9fafb;
+    transition: all 0.4s ease;
+}
+
+.feature-item:hover {
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateX(10px);
+}
+
+.feature-icon {
+    width: 54px;
+    height: 54px;
+    aspect-ratio: 1;
+    border-radius: 14px;
+    background: rgba(14, 165, 233, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    
+}
+
+.feature-icon::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+/* .science-icon::before { background-image: url('https://kommodo.ai/i/ad4esWM281qljUbj3hjU'); }
+.purity-icon::before { background-image: url('https://cdn-icons-png.flaticon.com/512/3067/3067566.png'); }
+.result-icon::before { background-image: url('https://cdn-icons-png.flaticon.com/512/1162/1162456.png'); } */
+
+.feature-text h4 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.5;
+}
+
+.brand-actions {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    padding: 16px 40px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background: #0ea5e9;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .brand-section {
+        padding: 100px 0;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .brand-content {
+        align-items: center;
+    }
+
+    .brand-desc {
+        max-width: 100%;
+    }
+
+    .brand-visual {
+        order: 2;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .image-stack {
+        max-width: 100%; /* Ensure it does not exceed the container */
+    }
+
+    .feature-item {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-section {
+        padding: 60px 0;
+    }
+
+    .brand-title {
+        font-size: 2.5rem;
+        margin-top: 10px;
+    }
+
+    .brand-desc {
+        font-size: 1.05rem;
+    }
+
+    .image-stack {
+        max-width: 320px;
+        margin-top: 20px;
+    }
+
+    .secondary-image {
+        right: -3%;
+        bottom: -8%;
+        width: 45%;
+        border-width: 6px;
+    }
+
+    .features-grid {
+        gap: 20px;
+    }
+
+    .feature-item {
+        padding: 15px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-section {
+        padding: 50px 0;
+    }
+
+    .brand-title {
+        font-size: 2.1rem;
+    }
+
+    .brand-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .image-stack {
+        max-width: 280px;
+    }
+
+    .secondary-image {
+        right: -2%;
+        bottom: -5%;
+        width: 40%;
+        border-width: 4px;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 14px 30px;
+    }
+}
