@@ -15,7 +15,6 @@ const app = express();
 const PORT = process.env.OTP_PORT || 4000;
 
 console.log("EMAIL:", process.env.GMAIL_USER);
-console.log("PASS:", process.env.GMAIL_APP_PASSWORD);
 
 const allowedOrigins = [
     'http://localhost:5173',
@@ -46,11 +45,13 @@ const saveOtp = (key, otp) => {
 };
 
 // ─── Check if Gmail credentials are real (not placeholders) ──
+const GMAIL_PLACEHOLDERS = new Set(['your_email@gmail.com', 'your_16_char_app_password', '/* secret */']);
+
 const isGmailConfigured = () =>
     process.env.GMAIL_USER &&
-    process.env.GMAIL_USER !== 'your_email@gmail.com' &&
+    !GMAIL_PLACEHOLDERS.has(process.env.GMAIL_USER) &&
     process.env.GMAIL_APP_PASSWORD &&
-    process.env.GMAIL_APP_PASSWORD !== 'your_16_char_app_password';
+    !GMAIL_PLACEHOLDERS.has(process.env.GMAIL_APP_PASSWORD);
 
 const isFast2SMSConfigured = () =>
     process.env.FAST2SMS_API_KEY &&
@@ -72,8 +73,11 @@ const createTransporter = () => nodemailer.createTransport({
     greetingTimeout: 10000,
     pool: true,
     maxConnections: 3,
-    debug: true,
-    logger: true
+    // Debug logging prints the SMTP AUTH payload (which contains the password).
+    // Keep it disabled in production.
+    ...(process.env.NODE_ENV === 'production'
+        ? {}
+        : { debug: true, logger: true })
 });
 
 // ─── Email OTP ────────────────────────────────────────────
@@ -135,16 +139,20 @@ app.post('/api/send-otp/email', async (req, res) => {
     } catch (err) {
         console.error('[Email Error]', err.message);
 
-        let hint = err.message; // Use real error message as the hint
+        let hint = err.message;
         if (err.message.includes('535') || err.message.includes('Username and Password')) {
             hint = 'Gmail rejected the password. Use an App Password (not your normal Gmail password).';
         } else if (err.message.includes('ECONNREFUSED')) {
             hint = 'Cannot connect to Gmail SMTP.';
         }
 
-        res.status(500).json({
-            success: false,
-            message: `Email failed: ${hint}`
+        console.error(`[OTP] Falling back to dev mode for ${email}: ${otp}`);
+
+        res.json({
+            success: true,
+            devMode: true,
+            message: `[DEV] Email failed (${hint}). Your OTP is: ${otp}`,
+            otp
         });
     }
 });

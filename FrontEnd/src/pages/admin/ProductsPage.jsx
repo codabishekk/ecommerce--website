@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import api, { BASE_URL } from '../../services/api';
 import { useAdminAuth } from '../../context/AdminAuthContext';
-import { Plus, Search, Edit2, Trash2, X, Upload, Package, Image as ImageIcon } from 'lucide-react';
+import { Plus, Search, Edit2, Trash2, X, Upload, Package, Image as ImageIcon, Tag } from 'lucide-react';
 import ConfirmModal from '../../components/admin/common/ConfirmModal';
 import styles from './ProductsPage.module.css';
 
@@ -16,6 +16,7 @@ const ProductsPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState('All');
     const [showForm, setShowForm] = useState(false);
+    const [showCatManager, setShowCatManager] = useState(false);
     const [editingProduct, setEditingProduct] = useState(null);
     const [saving, setSaving] = useState(false);
     const [deleteTarget, setDeleteTarget] = useState(null);
@@ -141,6 +142,10 @@ const ProductsPage = () => {
                     <p>Manage your product catalog.</p>
                 </div>
                 <div className={styles.headerActions}>
+                    <button className={styles.btnGlass} onClick={() => setShowCatManager(true)}>
+                        <Tag size={18} />
+                        Categories ({categories.length})
+                    </button>
                     <button className={styles.btnPrimary} onClick={openAdd}>
                         <Plus size={18} />
                         Add Product
@@ -335,6 +340,18 @@ const ProductsPage = () => {
                     onSave={handleSave}
                     onClose={() => { setShowForm(false); setEditingProduct(null); }}
                     getImageUrl={getImageUrl}
+                    token={token}
+                    fetchCategories={fetchCategories}
+                />
+            )}
+
+            {/* ─── Category Manager Modal ─────────────────────────────── */}
+            {showCatManager && (
+                <CategoryManagerModal
+                    categories={categories}
+                    token={token}
+                    fetchCategories={fetchCategories}
+                    onClose={() => setShowCatManager(false)}
                 />
             )}
 
@@ -367,8 +384,14 @@ const ProductsPage = () => {
 // ═══════════════════════════════════════════════════════════════════════════
 // Product Form Modal Component
 // ═══════════════════════════════════════════════════════════════════════════
-const ProductFormModal = ({ product, categories, saving, onSave, onClose, getImageUrl }) => {
+const ProductFormModal = ({ product, categories, saving, onSave, onClose, getImageUrl, token, fetchCategories }) => {
     const fileInputRef = useRef(null);
+    const [showAddCatInline, setShowAddCatInline] = useState(false);
+    const [newCatName, setNewCatName] = useState('');
+    const [newCatDesc, setNewCatDesc] = useState('');
+    const [creatingCat, setCreatingCat] = useState(false);
+    const [catError, setCatError] = useState('');
+    const [catSuccessMsg, setCatSuccessMsg] = useState('');
     const [form, setForm] = useState({
         name: product?.name || '',
         description: product?.description || '',
@@ -563,9 +586,92 @@ const ProductFormModal = ({ product, categories, saving, onSave, onClose, getIma
 
                             {/* Category & Brand */}
                             <div className={styles.formGroup}>
-                                <label>Category *</label>
+                                <div className={styles.labelWithAction}>
+                                    <label>Category *</label>
+                                    <button
+                                        type="button"
+                                        className={styles.addCategoryInlineBtn}
+                                        onClick={() => setShowAddCatInline(!showAddCatInline)}
+                                    >
+                                        <Plus size={14} /> Add Category
+                                    </button>
+                                </div>
+
+                                {catSuccessMsg && (
+                                    <div className={styles.catSuccessText}>
+                                        ✓ {catSuccessMsg}
+                                    </div>
+                                )}
+
+                                {showAddCatInline && (
+                                    <div className={styles.inlineCategoryForm}>
+                                        <div className={styles.inlineCatTitle}>Add New Category</div>
+                                        {catError && <div className={styles.catErrorText}>{catError}</div>}
+                                        <div className={styles.inlineCatInputs}>
+                                            <input
+                                                type="text"
+                                                placeholder="Category Name (e.g. Skin Care)"
+                                                value={newCatName}
+                                                onChange={e => setNewCatName(e.target.value)}
+                                                className={styles.inlineCatInput}
+                                            />
+                                            <input
+                                                type="text"
+                                                placeholder="Description (optional)"
+                                                value={newCatDesc}
+                                                onChange={e => setNewCatDesc(e.target.value)}
+                                                className={styles.inlineCatInput}
+                                            />
+                                        </div>
+                                        <div className={styles.inlineCatActions}>
+                                            <button
+                                                type="button"
+                                                className={styles.btnSaveInlineCat}
+                                                onClick={async (e) => {
+                                                    e.preventDefault();
+                                                    if (!newCatName.trim()) {
+                                                        setCatError('Category name is required');
+                                                        return;
+                                                    }
+                                                    setCatError('');
+                                                    setCreatingCat(true);
+                                                    try {
+                                                        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+                                                        const res = await api.post('/api/categories', { name: newCatName.trim(), description: newCatDesc.trim() }, { headers });
+                                                        if (res.data.success) {
+                                                            const newCat = res.data.data;
+                                                            await fetchCategories();
+                                                            setForm(prev => ({ ...prev, category: newCat._id }));
+                                                            setNewCatName('');
+                                                            setNewCatDesc('');
+                                                            setShowAddCatInline(false);
+                                                            setCatSuccessMsg(`Category "${newCat.name}" added and selected!`);
+                                                            setTimeout(() => setCatSuccessMsg(''), 4000);
+                                                        }
+                                                    } catch (err) {
+                                                        console.error('Failed to create category', err);
+                                                        setCatError(err.response?.data?.message || 'Failed to create category');
+                                                    } finally {
+                                                        setCreatingCat(false);
+                                                    }
+                                                }}
+                                                disabled={creatingCat}
+                                            >
+                                                {creatingCat ? 'Saving...' : 'Save & Select'}
+                                            </button>
+                                            <button
+                                                type="button"
+                                                className={styles.btnCancelInlineCat}
+                                                onClick={() => { setShowAddCatInline(false); setCatError(''); }}
+                                            >
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+
                                 <select
-                                    value={form.category}
+                                    value={categories.find(c => c._id === (typeof form.category === 'object' ? form.category._id : form.category) || c.name === form.category)?._id || (typeof form.category === 'object' ? form.category._id : form.category) || ''}
                                     onChange={e => handleChange('category', e.target.value)}
                                     required
                                 >
@@ -830,6 +936,115 @@ const ProductFormModal = ({ product, categories, saving, onSave, onClose, getIma
                         </button>
                     </div>
                 </form>
+            </div>
+        </div>
+    );
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// Category Manager Modal Component
+// ═══════════════════════════════════════════════════════════════════════════
+const CategoryManagerModal = ({ categories, token, fetchCategories, onClose }) => {
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+    const [saving, setSaving] = useState(false);
+    const [error, setError] = useState('');
+    const [deletingId, setDeletingId] = useState(null);
+
+    const handleCreate = async (e) => {
+        e.preventDefault();
+        if (!name.trim()) {
+            setError('Category name is required');
+            return;
+        }
+        setError('');
+        setSaving(true);
+        try {
+            const headers = token ? { Authorization: `Bearer ${token}` } : {};
+            await api.post('/api/categories', { name: name.trim(), description: description.trim() }, { headers });
+            setName('');
+            setDescription('');
+            await fetchCategories();
+        } catch (err) {
+            setError(err.response?.data?.message || 'Failed to create category');
+        } finally {
+            setSaving(false);
+        }
+    };
+
+    const handleDelete = async (catId) => {
+        if (!window.confirm('Are you sure you want to delete this category?')) return;
+        setDeletingId(catId);
+        try {
+            const headers = token ? { Authorization: `Bearer ${token}` } : {};
+            await api.delete(`/api/categories/${catId}`, { headers });
+            await fetchCategories();
+        } catch (err) {
+            alert(err.response?.data?.message || 'Failed to delete category');
+        } finally {
+            setDeletingId(null);
+        }
+    };
+
+    return (
+        <div className={styles.modalOverlay} onClick={onClose}>
+            <div className={styles.modalContent} style={{ maxWidth: '550px' }} onClick={e => e.stopPropagation()}>
+                <div className={styles.modalHeader}>
+                    <h2>Manage Categories</h2>
+                    <button className={styles.modalCloseBtn} onClick={onClose}>
+                        <X size={18} />
+                    </button>
+                </div>
+                <div className={styles.modalBody}>
+                    <form onSubmit={handleCreate} className={styles.catManagerForm}>
+                        <h3 style={{ fontSize: '0.9rem', fontWeight: 600, margin: 0, color: 'var(--admin-text-main)' }}>Add New Category</h3>
+                        {error && <div className={styles.catErrorText}>{error}</div>}
+                        <input
+                            type="text"
+                            placeholder="Category Name (e.g. Facial Cleanser)"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            className={styles.inlineCatInput}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Description (optional)"
+                            value={description}
+                            onChange={e => setDescription(e.target.value)}
+                            className={styles.inlineCatInput}
+                        />
+                        <button type="submit" className={styles.btnPrimary} style={{ alignSelf: 'flex-start' }} disabled={saving}>
+                            <Plus size={16} />
+                            {saving ? 'Creating...' : 'Add Category'}
+                        </button>
+                    </form>
+
+                    <h3 style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '0.75rem', color: 'var(--admin-text-main)' }}>Existing Categories ({categories.length})</h3>
+                    <div className={styles.catList}>
+                        {categories.length === 0 ? (
+                            <p style={{ color: 'var(--admin-text-muted)', fontSize: '0.85rem' }}>No categories found.</p>
+                        ) : (
+                            categories.map(cat => (
+                                <div key={cat._id} className={styles.catListItem}>
+                                    <div className={styles.catInfo}>
+                                        <span className={styles.catName}>{cat.name}</span>
+                                        {cat.description && <span className={styles.catDesc}>{cat.description}</span>}
+                                    </div>
+                                    <button
+                                        type="button"
+                                        className={`${styles.actionBtn} ${styles.actionBtnDanger}`}
+                                        onClick={() => handleDelete(cat._id)}
+                                        disabled={deletingId === cat._id}
+                                        title="Delete Category"
+                                    >
+                                        <Trash2 size={14} />
+                                    </button>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     );

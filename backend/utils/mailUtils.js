@@ -25,8 +25,9 @@ const createTransporter = () => nodemailer.createTransport({
  * Send Order Email
  */
 const sendOrderEmail = async (userEmail, userName, orderId, status, extraData = {}) => {
-    // Check if Gmail is configured
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    // Check if Gmail is configured (real credentials, not placeholders)
+    const placeholders = new Set(['your_16_char_app_password', '/* secret */']);
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD || placeholders.has(process.env.GMAIL_APP_PASSWORD)) {
         console.warn(`[Mail] Gmail not configured. Skipping email to ${userEmail} for order #${orderId} (Status: ${status})`);
         return;
     }

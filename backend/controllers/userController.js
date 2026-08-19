@@ -33,10 +33,10 @@ const requestRegister = async (req, res) => {
       res.status(500).json({ success: false, message: "Failed to send OTP." });
     }
   } catch (error) {
-    if (error.code === 'ECONNREFUSED' || error.message.includes('network')) {
+    if (error.code === 'ECONNREFUSED' || error.message?.includes('network')) {
       return res.status(503).json({ success: false, message: "OTP server is down. Please contact support." });
     }
-    res.status(500).json({ success: false, message: error.response?.data?.message || error.message });
+    res.status(500).json({ success: false, message: error.response?.data?.message || error.message || "Failed to send OTP." });
   }
 };
 
@@ -135,10 +135,10 @@ const forgotPassword = async (req, res) => {
       res.status(500).json({ success: false, message: "Failed to send OTP." });
     }
   } catch (error) {
-    if (error.code === 'ECONNREFUSED' || error.message.includes('network')) {
+    if (error.code === 'ECONNREFUSED' || error.message?.includes('network')) {
       return res.status(503).json({ success: false, message: "OTP server is down. Please contact support." });
     }
-    res.status(500).json({ success: false, message: error.response?.data?.message || error.message });
+    res.status(500).json({ success: false, message: error.response?.data?.message || error.message || "Failed to send OTP." });
   }
 };
 

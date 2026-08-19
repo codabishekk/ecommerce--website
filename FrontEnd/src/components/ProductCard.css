@@ -194,6 +194,147 @@
     }
 }
 
+/* ─── Desktop Product Card Upgrade ─────────────────────────────────────────────── */
+@media (min-width: 993px) {
+    .product-card {
+        border-radius: 16px;
+        width:225px;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #f1f5f9;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .product-card:hover {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+        transform: translateY(-6px);
+        border-color: #e2e8f0;
+    }
+
+    .product-image-container {
+        aspect-ratio: 1 / 1;
+        background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%);
+        border-bottom: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .product-image {
+        padding: 24px;
+        transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .product-card:hover .product-image {
+        transform: scale(1.03);
+    }
+
+    .product-badge {
+        top: 12px;
+        right: 12px;
+        padding: 5px 14px;
+        border-radius: 8px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        background: rgba(14, 165, 233, 0.9);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+    }
+
+    .product-info {
+        padding: 16px 18px 18px;
+    }
+
+    .product-meta {
+        margin-bottom: 8px;
+    }
+
+    .product-price {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #0f172a;
+        letter-spacing: -0.01em;
+    }
+
+    .product-rating {
+        font-size: 0.8rem;
+        color: #64748b;
+        gap: 3px;
+    }
+
+    .product-rating .star {
+        color: #f59e0b;
+        font-size: 0.9rem;
+    }
+
+    .reviews-count {
+        font-size: 0.75rem;
+        color: #94a3b8;
+    }
+
+    .product-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1e293b;
+        line-height: 1.4;
+        min-height: 42px;
+        margin: 6px 0;
+        letter-spacing: -0.01em;
+    }
+
+    .product-description {
+        font-size: 0.82rem;
+        color: #64748b;
+        line-height: 1.5;
+        margin: 4px 0 8px;
+    }
+
+    .product-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .product-btn {
+        padding: 10px 8px;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        transition: all 0.25s ease;
+    }
+
+    .product-footer .product-btn:first-child {
+        background: #0f172a;
+        color: #fff;
+    }
+
+    .product-footer .product-btn:first-child:hover {
+        background: #1e293b;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+    }
+
+    .product-footer .product-btn:last-child {
+        background: transparent;
+        color: #0f172a;
+        border: 1.5px solid #e2e8f0;
+    }
+
+    .product-footer .product-btn:last-child:hover {
+        border-color: #0ea5e9;
+        color: #0ea5e9;
+        background: #f0f9ff;
+        transform: translateY(-1px);
+    }
+
+    .product-btn:active {
+        transform: scale(0.97);
+    }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .product-grid {

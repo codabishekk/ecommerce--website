@@ -12,7 +12,7 @@ const getBaseURL = () => {
 export const BASE_URL = getBaseURL();
 
 const api = axios.create({
-    baseURL: BASE_URL
+    baseURL: import.meta.env.DEV ? '' : BASE_URL
 });
 
 // Optional: Add request interceptor for tokens

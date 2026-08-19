@@ -1074,3 +1074,168 @@
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ─── Category Management & Inline Form ──────────────────────────────────── */
+.labelWithAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.375rem;
+}
+
+.addCategoryInlineBtn {
+  background: none;
+  border: none;
+  color: var(--admin-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.addCategoryInlineBtn:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.catSuccessText {
+  background-color: var(--admin-success-light);
+  color: var(--admin-success);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.catErrorText {
+  color: var(--admin-danger);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+}
+
+.inlineCategoryForm {
+  background-color: var(--admin-surface-hover);
+  border: 1.5px dashed var(--admin-primary);
+  padding: 0.875rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 0.75rem;
+  animation: fadeUpIn 0.2s ease forwards;
+}
+
+.inlineCatTitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+}
+
+.inlineCatInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inlineCatInput {
+  background-color: var(--admin-surface) !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.8125rem !important;
+  color: var(--admin-text-main) !important;
+}
+
+.inlineCatActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.btnSaveInlineCat {
+  background-color: var(--admin-primary);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.875rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnSaveInlineCat:hover {
+  filter: brightness(1.1);
+}
+
+.btnSaveInlineCat:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnCancelInlineCat {
+  background: transparent;
+  border: 1px solid var(--admin-border);
+  color: var(--admin-text-muted);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.btnCancelInlineCat:hover {
+  background-color: var(--admin-surface-hover);
+  color: var(--admin-text-main);
+}
+
+/* Category Manager Modal */
+.catManagerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.catList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.catListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--admin-surface-hover);
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+}
+
+.catInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.catName {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--admin-text-main);
+}
+
+.catDesc {
+  font-size: 0.75rem;
+  color: var(--admin-text-muted);
+}
+

@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test tests/ai.test.js",
     "build": "echo 'Starting frontend build...' && cd ../FrontEnd && echo 'Installing dependencies...' && NODE_OPTIONS=--max-old-space-size=512 npm install && echo 'Running build...' && npm run build && echo 'Build completed successfully'",
+    "ingest:knowledge": "node scripts/ingestKnowledge.js",
     "postinstall": "echo 'Running postinstall build...' && npm run build",
     "start": "concurrently \"node server.js\" \"node otp-server.js\"",
     "start:api": "node server.js",
@@ -29,9 +30,11 @@
     "mongoose": "^9.3.0",
     "multer": "^2.1.1",
     "multer-storage-cloudinary": "^4.0.0",
-    "nodemailer": "^8.0.4"
+    "nodemailer": "^8.0.4",
+    "openai": "^7.4.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
   }
 }

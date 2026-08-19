@@ -22,6 +22,8 @@ const protect = async (req, res, next) => {
             res.status(401).json({ message: 'Not authorized to access this route' })
         }
 
+    } else {
+        res.status(401).json({ success: false, message: 'Not authorized - no token provided' });
     }
 };
 

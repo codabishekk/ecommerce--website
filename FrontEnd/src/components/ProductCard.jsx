@@ -118,12 +118,12 @@ const ProductCard = ({
                 <p className="product-description">{description}</p>
 
                 <div className="product-footer">
-                    <button className="product-btn" onClick={handleBuyClick}>
-                        BUY
+                    <button className="product-btn btn-buy" onClick={handleBuyClick}>
+                        <span className="btn-icon">⚡</span> BUY
                     </button>
 
-                    <button className="product-btn" onClick={handleAddToCartClick}>
-                        ADD CART
+                    <button className="product-btn btn-cart" onClick={handleAddToCartClick}>
+                        <span className="btn-icon">🛒</span> CART
                     </button>
                 </div>
             </div>

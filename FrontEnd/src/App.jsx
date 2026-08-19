@@ -17,6 +17,7 @@ import PaymentProcess from './pages/PaymentProcess';
 import OurProducts from './components/OurProducts';
 import BrandSection from './components/BrandSection';
 import WhatsAppButton from './components/WhatsAppButton';
+import AIChatWidget from './components/ai/AIChatWidget';
 import AuthModal from './components/AuthModal';
 import Profile from './pages/Profile';
 import ScrollToTop from './components/ScrollToTop';
@@ -185,6 +186,13 @@ function App() {
         
         {!isAdminRoute && <Footer />}
         {!isAdminRoute && <WhatsAppButton />}
+        {!isAdminRoute && (
+          <AIChatWidget
+            onAddToCart={handleAddToCart}
+            onBuyClick={handleBuyClick}
+            onLoginClick={() => setIsAuthOpen(true)}
+          />
+        )}
         {!isAdminRoute && (
           <AuthModal
             isOpen={isAuthOpen}

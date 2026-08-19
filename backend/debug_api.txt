@@ -1108,3 +1108,114 @@ Request: {}
 Request: {}
 Request: {}
 Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Error: F8390000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
+Stack: MongoServerSelectionError: F8390000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
+    at Topology.selectServer (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Error: F8390000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
+Stack: MongoServerSelectionError: F8390000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
+    at Topology.selectServer (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\sdam\topology.js:347:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async tryOperation (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\operations\execute_operation.js:150:18)
+    at async executeOperation (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async AggregationCursor._initialize (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:57:26)
+    at async AggregationCursor.cursorInit (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async AggregationCursor.fetchBatch (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async AggregationCursor.next (E:\E-COMMERCE\Sholash-Life-Science-main\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}
+Request: {}

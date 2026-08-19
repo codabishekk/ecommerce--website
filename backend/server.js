@@ -112,6 +112,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/banners", bannerRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/ai", require("./routes/aiRoutes")());
 
 // ─── Serve Frontend ───────────────────────────────────────────────────────────
 const frontendPath = path.join(__dirname, "../FrontEnd/dist");
