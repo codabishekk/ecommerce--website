@@ -687,7 +687,7 @@ const ProductFormModal = ({ product, categories, saving, onSave, onClose, getIma
                                     type="text"
                                     value={form.brand}
                                     onChange={e => handleChange('brand', e.target.value)}
-                                    placeholder="Sholash"
+                                    placeholder="Skin Care"
                                 />
                             </div>
 

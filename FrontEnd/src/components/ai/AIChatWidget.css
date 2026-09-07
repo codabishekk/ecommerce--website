@@ -10,7 +10,7 @@
     background: var(--gradient-ocean, linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%));
     color: #fff;
     border: none;
-    border-radius: 50%;
+    border-radius: var(--radius-full, 50%);
     font-size: 24px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@
     height: 560px;
     max-height: calc(100vh - 140px);
     background: var(--color-surface, #fff);
-    border-radius: 18px;
+    border-radius: var(--radius-lg, 18px);
     box-shadow: 0 20px 55px rgba(14, 165, 233, 0.22);
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@
     width: 36px;
     height: 36px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    border-radius: var(--radius-full, 50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +116,7 @@
 .ai-msg {
     max-width: 85%;
     padding: 10px 14px;
-    border-radius: 14px;
+    border-radius: var(--radius-lg, 14px);
     font-size: 14px;
     line-height: 1.45;
     word-break: break-word;
@@ -154,7 +154,7 @@
 .ai-bot-avatar {
     width: 28px;
     height: 28px;
-    border-radius: 50%;
+    border-radius: var(--radius-full, 50%);
     background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%);
     color: #fff;
     display: flex;
@@ -222,7 +222,7 @@
     background: var(--color-surface, #fff);
     border: 1px solid var(--color-border, rgba(226, 232, 240, 0.8));
     color: var(--color-primary-aqua, #0ea5e9);
-    border-radius: 999px;
+    border-radius: var(--radius-pill, 999px);
     padding: 6px 12px;
     font-size: 12.5px;
     cursor: pointer;
@@ -245,7 +245,7 @@
 .ai-input {
     flex: 1;
     border: 1px solid var(--color-border, rgba(226, 232, 240, 0.8));
-    border-radius: 999px;
+    border-radius: var(--radius-pill, 999px);
     padding: 10px 16px;
     font-size: 14px;
     font-family: inherit;
@@ -260,7 +260,7 @@
     width: 42px;
     height: 42px;
     border: none;
-    border-radius: 50%;
+    border-radius: var(--radius-full, 50%);
     background: var(--gradient-ocean, linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%));
     color: #fff;
     font-size: 16px;
@@ -292,7 +292,7 @@
     padding: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid #e9ecef;
-    border-radius: 12px;
+    border-radius: var(--radius-md, 12px);
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: #fff;
@@ -393,7 +393,7 @@
     top: 10px;
     right: 10px;
     padding: 4px 12px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm, 6px);
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.6px;
@@ -416,7 +416,7 @@
     margin-top: 10px;
     background: var(--color-surface, #fff);
     border: 1px solid var(--color-border, rgba(226, 232, 240, 0.8));
-    border-radius: 10px;
+    border-radius: var(--radius-md, 10px);
     padding: 10px 12px;
     font-size: 13px;
 }
@@ -438,7 +438,7 @@
     font-weight: 600;
     text-transform: capitalize;
     padding: 2px 8px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill, 999px);
     background: #e0f2fe;
     color: #0369a1;
 }
@@ -484,7 +484,7 @@
     margin-top: 10px;
     background: #e0f2fe;
     color: #0369a1;
-    border-radius: 8px;
+    border-radius: var(--radius-md, 8px);
     padding: 8px 12px;
     font-size: 13px;
 }
@@ -495,7 +495,7 @@
     margin-top: 10px;
     background: var(--color-surface, #fff);
     border: 1px solid var(--color-border, rgba(226, 232, 240, 0.8));
-    border-radius: 10px;
+    border-radius: var(--radius-md, 10px);
     padding: 12px;
 }
 
@@ -521,7 +521,7 @@
 .ai-btn {
     flex: 1;
     border: none;
-    border-radius: 999px;
+    border-radius: var(--radius-pill, 999px);
     padding: 9px 12px;
     font-size: 13px;
     font-weight: 600;

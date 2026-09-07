@@ -387,7 +387,7 @@ test("end-to-end chat surfaces structured product results", { skip: !dbConnected
         category: cat._id,
         stock: 5,
         images: ["vc.jpg"],
-        brand: "Sholash",
+        brand: "Skin Care",
         isActive: true,
     });
 

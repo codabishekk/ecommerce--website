@@ -1,5 +1,5 @@
 .hero {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
@@ -82,7 +82,7 @@
 
 .hero-visual {
     position: relative;
-    height: 500px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

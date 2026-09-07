@@ -10,7 +10,7 @@ const Hero = () => {
                     <h1 className="hero-title serif">Reveal Your <br />Natural Radiance</h1>
                     <p className="hero-description">
                         Scientifically formulated skincare designed to strengthen your skin barrier
-                        and restore your inner glow. Experience the Sholash difference.
+                        and restore your inner glow. Experience the Skin Care difference.
                     </p>
                     <div className="hero-cta">
                         <button className="btn btn-primary">Shop Collection</button>

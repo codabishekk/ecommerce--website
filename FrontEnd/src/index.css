@@ -32,6 +32,37 @@
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Outfit', sans-serif;
 
+  /* Type Scale — 10 steps */
+  --text-xs: 0.7rem;
+  --text-sm: 0.82rem;
+  --text-base: 1rem;
+  --text-md: 1.1rem;
+  --text-lg: 1.2rem;
+  --text-xl: 1.35rem;
+  --text-2xl: 1.8rem;
+  --text-3xl: clamp(2rem, 4vw, 3rem);
+  --text-4xl: clamp(2.5rem, 6vw, 4.5rem);
+
+  /* Border Radius — 6 steps */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 50px;
+  --radius-full: 50%;
+
+  /* Button System — 3 variants */
+  /* .btn-primary   — solid fill, dark bg       (main CTAs) */
+  /* .btn-secondary — outlined, transparent bg   (secondary actions) */
+  /* .btn-ghost     — transparent, no border      (tertiary / inline) */
+
+  /* Shared button base */
+  --btn-padding: 14px 36px;
+  --btn-font-size: var(--text-base);
+  --btn-font-weight: 600;
+  --btn-radius: var(--radius-md);
+  --btn-transition: all 0.3s ease;
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -80,6 +111,7 @@ h3,
 }
 
 .text-gradient {
+  background-color: #0369a1;
   background: var(--gradient-ocean);
   -webkit-background-clip: text;
   background-clip: text;
@@ -175,10 +207,82 @@ button {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-primary-aqua);
-  border-radius: 5px;
+  border-radius: var(--radius-pill, 5px);
   border: 3px solid var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-secondary-deep);
+}
+
+/* Screen reader only - visually hidden but accessible */
+/* ─── Shared Button System ─────────────────────────────────────────────────────── */
+/* 3 variants: primary / secondary / ghost                                         */
+
+.btn-primary,
+.btn-secondary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--btn-padding);
+  font-family: var(--font-sans);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: var(--btn-transition);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-primary {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text-main);
+  border: 1.5px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+  background: #f0f9ff;
+  transform: translateY(-4px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-main);
+  border: none;
+  padding: 8px 16px;
+}
+
+.btn-ghost:hover {
+  color: #0ea5e9;
+}
+
+/* ─── Screen reader only ──────────────────────────────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

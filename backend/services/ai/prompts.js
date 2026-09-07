@@ -1,6 +1,6 @@
 // ─── System prompt for the AI customer support assistant ─────────────────────
 const SYSTEM_PROMPT = [
-    "You are an AI customer support assistant for Sholash Life Science, an e-commerce skincare brand.",
+    "You are an AI customer support assistant for Skin Care Product, an e-commerce skincare brand.",
     "Be helpful, polite and concise.",
     "",
     "Rules you MUST follow:",

@@ -294,7 +294,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
     const renderHeader = (title, subtitle) => (
         <div className="auth-modal-header">
             <div className="auth-modal-logo">
-                <img src={logo} alt="Sholash Logo" className="auth-logo-img" />
+                <img src={logo} alt="Skin Care Logo" className="auth-logo-img" />
             </div>
             <h2 className="serif auth-modal-title">{title}</h2>
             {subtitle && <p className="auth-modal-subtitle">{subtitle}</p>}
@@ -310,7 +310,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
             <div className="auth-success-icon">✅</div>
             <h3 className="auth-success-name">{successMsg}</h3>
             <p className="auth-success-msg">
-                {product ? `You can now proceed to purchase ${product.name}.` : 'Welcome to Sholash Life Science.'}
+                {product ? `You can now proceed to purchase ${product.name}.` : 'Welcome to Skin Care Life Science.'}
             </p>
         </div>
     );
@@ -340,11 +340,11 @@ const AuthModal = ({ isOpen, onClose, product }) => {
                                         </button>
                                     </form>
                                     <p className="auth-footer-text" style={{ textAlign: 'left', marginTop: '15px', color: '#555' }}>
-                                        By continuing, you agree to Sholash's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+                                        By continuing, you agree to Skin Care's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
                                     </p>
                                     
-                                    <div className="auth-footer-divider" data-text="New to Sholash?"></div>
-                                    <button className="auth-btn-sec" onClick={() => setView('REGISTER')}>Create your Sholash account</button>
+                                    <div className="auth-footer-divider" data-text="New to Skin Care?"></div>
+                                    <button className="auth-btn-sec" onClick={() => setView('REGISTER')}>Create your Skin Care account</button>
                                 </div>
                             </>
                         )}
@@ -420,7 +420,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
                                         ))}
                                     </div>
                                     <button onClick={handleVerifyRegister} className="auth-btn-primary" disabled={loading}>
-                                        {loading ? <span className="auth-spinner" /> : 'Create your Sholash account'}
+                                        {loading ? <span className="auth-spinner" /> : 'Create your Skin Care account'}
                                     </button>
                                     <div className="auth-resend-row">
                                         {timer > 0 ? <span className="auth-timer">Resend OTP in {timer}s</span> : 
@@ -434,7 +434,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
                         {/* ─── 4. FORGOT PASSWORD - EMAIL ──────────────────────── */}
                         {view === 'FORGOT_EMAIL' && (
                             <>
-                                {renderHeader('Password assistance', 'Enter the email address associated with your Sholash account.')}
+                                {renderHeader('Password assistance', 'Enter the email address associated with your Skin Care account.')}
                                 <div className="auth-modal-body">
                                     {renderError()}
                                     <form onSubmit={handleRequestReset} className="auth-form">

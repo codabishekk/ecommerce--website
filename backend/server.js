@@ -100,7 +100,7 @@ app.use('/assets', (req, res, next) => {
 
 // ─── Health Check ─────────────────────────────────────────────────────────────
 app.get("/", (req, res) => {
-    res.json({ success: true, message: "Sholash Life Science API is running 🚀" });
+    res.json({ success: true, message: "Skin Care Product API is running 🚀" });
 });
 
 // ─── Routes ───────────────────────────────────────────────────────────────────

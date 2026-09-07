@@ -1,5 +1,5 @@
 /**
- * Email Templates for Sholash Life Science
+ * Email Templates for Skin Care Product
  * Established Premium Aquatic Aesthetic: Aqua Blue, Deep Green, Soft Backgrounds.
  */
 
@@ -31,7 +31,7 @@ const baseLayout = (heroText, bodyHtml, buttonText, buttonUrl) => `
 <body>
     <div class="container">
         <div class="header">
-            <img src="cid:logo_symbol" alt="Sholash" class="logo">
+            <img src="cid:logo_symbol" alt="Skin Care" class="logo">
             <div class="hero-text">${heroText}</div>
         </div>
         <div class="content">
@@ -49,7 +49,7 @@ const baseLayout = (heroText, bodyHtml, buttonText, buttonUrl) => `
             <div class="social-links">
                 Follow us: <a href="#" style="color:#64748b; margin:0 5px;">Instagram</a> | <a href="#" style="color:#64748b; margin:0 5px;">Facebook</a>
             </div>
-            © 2025 Sholash Life Science. All rights reserved.<br>
+            © 2025 Skin Care Product. All rights reserved.<br>
             Nature's secret for your skin and soul.
         </div>
     </div>
@@ -65,7 +65,7 @@ const orderPlacedTemplate = (customerName, orderId, orderDetailsUrl) => {
             <div class="order-id">Order ID: #${orderId}</div>
             <p class="text" style="margin: 0; font-size: 14px;">You'll receive another update once your package moves to the processing stage.</p>
         </div>
-        <p class="text">Thank you for choosing Sholash Life Science for your skin and wellness journey.</p>
+        <p class="text">Thank you for choosing Skin Care Product for your skin and wellness journey.</p>
     `;
     return baseLayout("Order Confirmed! 🎉", body, "View Order Details", orderDetailsUrl);
 };
@@ -86,7 +86,7 @@ const orderProcessingTemplate = (customerName, orderId, orderDetailsUrl) => {
 const orderShippedTemplate = (customerName, orderId, trackingNumber, trackingUrl) => {
     const body = `
         <p class="text">Hi ${customerName},</p>
-        <p class="text">Great news! Your Sholash package has officially left our facility and is now on its way to your doorstep.</p>
+        <p class="text">Great news! Your Skin Care package has officially left our facility and is now on its way to your doorstep.</p>
         <div class="order-box">
             <div class="order-id">Order ID: #${orderId}</div>
             <p class="text" style="margin: 0; font-size: 15px;">Tracking Number: <strong>${trackingNumber}</strong></p>
@@ -99,12 +99,12 @@ const orderShippedTemplate = (customerName, orderId, trackingNumber, trackingUrl
 const orderDeliveredTemplate = (customerName, orderId) => {
     const body = `
         <p class="text">Hi ${customerName},</p>
-        <p class="text">Your Sholash order has been delivered! We hope your new products bring a touch of nature and wellness to your daily routine.</p>
+        <p class="text">Your Skin Care order has been delivered! We hope your new products bring a touch of nature and wellness to your daily routine.</p>
         <div class="order-box">
             <div class="order-id">Order ID: #${orderId}</div>
             <p class="text" style="margin: 0; font-size: 14px;">Enjoying your purchase? We'd love to hear your thoughts!</p>
         </div>
-        <p class="text">Thank you for being a valued part of the Sholash Life Science family.</p>
+        <p class="text">Thank you for being a valued part of the Skin Care Product family.</p>
     `;
     return baseLayout("Delivered! Enjoy 💚", body, "Leave a Review", "https://sholash.com/my-account/orders");
 };

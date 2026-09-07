@@ -43,7 +43,7 @@ const sendOrderEmail = async (userEmail, userName, orderId, status, extraData = 
             html = orderPlacedTemplate(userName, orderId, orderDetailsUrl);
             break;
         case 'processing':
-            subject = `Your Sholash order #${orderId} is being prepared`;
+            subject = `Your Skin Care order #${orderId} is being prepared`;
             html = orderProcessingTemplate(userName, orderId, orderDetailsUrl);
             break;
         case 'shipped':
@@ -51,7 +51,7 @@ const sendOrderEmail = async (userEmail, userName, orderId, status, extraData = 
             html = orderShippedTemplate(userName, orderId, extraData.trackingNumber || 'Tracking Info Soon', extraData.trackingUrl || orderDetailsUrl);
             break;
         case 'delivered':
-            subject = `Delivered: Your Sholash order #${orderId} has arrived 💚`;
+            subject = `Delivered: Your Skin Care order #${orderId} has arrived 💚`;
             html = orderDeliveredTemplate(userName, orderId);
             break;
         default:
@@ -60,7 +60,7 @@ const sendOrderEmail = async (userEmail, userName, orderId, status, extraData = 
 
     try {
         await transporter.sendMail({
-            from: `"Sholash Life Science" <${process.env.GMAIL_USER}>`,
+            from: `"Skin Care Life Science" <${process.env.GMAIL_USER}>`,
             to: userEmail,
             subject: subject,
             html: html,

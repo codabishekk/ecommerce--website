@@ -26,7 +26,7 @@ const skinTypes = [
         title: "Sensitive Skin",
         description: "Sensitive skin is easily irritated, prone to redness, dryness, and reactions to environmental factors or products.",
         icon: (
-           <img src={organicIcon3} alt="Sensitive skin" />
+           <img src={organicIcon3} alt="Sensitive Skin" />
         )
     },
     {
@@ -34,7 +34,7 @@ const skinTypes = [
         title: "Acne-Prone Skin",
         description: "Acne-prone skin requires gentle care, non-comedogenic products, and calming ingredients to prevent breakouts and irritation.",
         icon: (
-            <img src={organicIcon4} alt="Acne-prone skin" />
+            <img src={organicIcon4} alt="Acne-Prone Skin" />
         )
     }
 ];

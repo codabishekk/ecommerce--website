@@ -2,7 +2,7 @@
 
 ## How to reach us
 - AI support assistant: available 24/7 on our website
-- Email: support@sholashlifescience.com
+- Email: support@skincareproduct.com
 - Phone: 9500522551
 
 ## Support hours

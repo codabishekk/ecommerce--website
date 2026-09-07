@@ -19,9 +19,9 @@ const Footer = () => {
             <div className="container footer-content">
                 <div className="footer-brand">
                     <div className="logo">
-                        <img src={logo} alt="Sholash Life Sciences" className="logo-img" />
+                        <img src={logo} alt="Sholash Life Science" className="logo-img" />
                     </div>
-                    <p>Sholash Life Sciences is dedicated to advancing health through innovative research, quality products, and a commitment to scientific excellence.</p>
+                    <p>Sholash Life Science is dedicated to advancing health through innovative research, quality products, and a commitment to scientific excellence.</p>
                 </div>
                 <div className="footer-links">
                     <div className="link-group">
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="container">
-                    <p>&copy; 2026 SHOLASH DEVELOPED BY AIM UNIVERSSE</p>
+                    <p>&copy; 2026 Sholash Life Science. Developed by AIM Universe.</p>
                 </div>
             </div>
         </footer>

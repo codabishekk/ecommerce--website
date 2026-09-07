@@ -4,72 +4,54 @@
 }
 
 .our-products-section {
-    padding: var(--spacing-sm
-    ) 0;
+    padding: 60px 0;
     background-color: #ffffff;
 }
 
-.our-products-title {
+.our-products-header {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-xl);
-    color: #000000;
+    margin-bottom: 48px;
+}
+
+.our-products-subtitle {
+    display: block;
+    font-size: var(--text-sm, 0.85rem);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #0369a1;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.our-products-title {
+    font-size: var(--text-3xl, clamp(2rem, 4vw, 3rem));
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.our-products-desc {
+    font-size: var(--text-md, 1.1rem);
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .our-products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    justify-items: center;
 }
 
-.our-product-card {
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.4s ease;
-    /* Scroll reveal — hidden by default */
-    opacity: 0;
-    transform: translateY(40px);
+.no-results h3 {
+    font-size: var(--text-2xl, 1.5rem);
+    color: #0f172a;
+    margin-bottom: 8px;
 }
 
-.our-product-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.our-product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.our-product-image-container {
-    background-color: #f5f5f5;
-    /* Light gray background like in the screenshot */
-    border-radius: 0px;
-    padding: 15px;
-    margin-bottom: 10px;
-    aspect-ratio: 4 / 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.our-product-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-}
-
-.our-product-card:hover .our-product-image {
-    transform: scale(1.08);
-}
-
-.our-product-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000000;
-    margin: 0;
+.no-results p {
+    color: #64748b;
 }
 
 @media (max-width: 992px) {
@@ -79,11 +61,20 @@
 }
 
 @media (max-width: 576px) {
+    .our-products-section {
+        padding: 40px 0;
+    }
+
     .our-products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .our-products-title {
-        font-size: 2rem;
+        font-size: var(--text-2xl, 1.8rem);
+    }
+
+    .our-products-desc {
+        font-size: var(--text-base, 0.95rem);
     }
 }

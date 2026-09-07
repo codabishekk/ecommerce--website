@@ -27,9 +27,9 @@ const BrandSection = () => {
 
                 <div className="brand-content">
                     <span className="brand-badge accent-font">Our Legacy & Science</span>
-                    <h2 className="brand-title serif">Science-Backed <span className="text-gradient">Skincare For</span>Real Results</h2>
+                    <h2 className="brand-title serif">Science-Backed <span className="text-gradient">Skincare For</span> Real Results</h2>
                     <p className="brand-desc">
-                        At Sholash Life Sciences, we combine advanced dermatological research with carefully selected ingredients to create skincare that delivers visible, lasting results.
+                        At Sholash Life Science, we combine advanced dermatological research with carefully selected ingredients to create skincare that delivers visible, lasting results.
                         Engineered to restore balance, enhance clarity, and support your skin’s  strength.
                     </p>
 
@@ -40,7 +40,7 @@ const BrandSection = () => {
 
                             </div>
                             <div className="feature-text">
-                                <h4 className="serif">Science-Driven Care</h4>
+                                <h3 className="serif">Science-Driven Care</h3>
                                 <p>Formulated with clinically studied ingredients to improve hydration, texture, and skin resilience.</p>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ const BrandSection = () => {
                                 <img src={icons2} alt="Dermatologist-Tested Safety" />
                             </div>
                             <div className="feature-text">
-                                <h4 className="serif">Dermatologist-Tested Safety</h4>
+                                <h3 className="serif">Dermatologist-Tested Safety</h3>
                                 <p>Protecting your skin with dermatologically tested formulas.Gentle, effective, and suitable for sensitive and acne-prone skin.</p>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ const BrandSection = () => {
                                 <img src={icons3} alt="Lasting Results" />
                             </div>
                             <div className="feature-text">
-                                <h4 className="serif">Lasting Results</h4>
+                                <h3 className="serif">Lasting Results</h3>
                                 <p>Designed to deliver real improvements in skin clarity, smoothness, and overall health.</p>
                             </div>
                         </div>

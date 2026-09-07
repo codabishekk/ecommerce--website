@@ -76,13 +76,13 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
                 </button>
                 <div className="logo">
                     <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                        <img src={logo} alt="Sholash Life Sciences" className="logo-img" />
+                        <img src={logo} alt="Sholash Life Science" className="logo-img" />
                     </Link>
                 </div>
                 <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
                 <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
                     <div className="nav-mobile-header">
-                        <img src={logo} alt="Sholash Life Sciences" className="nav-mobile-logo" />
+                        <img src={logo} alt="Sholash Life Science" className="nav-mobile-logo" />
                         <button className="close-nav-btn" onClick={() => setIsMenuOpen(false)} aria-label="Close Menu">
                             <X size={24} />
                         </button>
@@ -90,7 +90,7 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
                     <div className="nav-links">
                         <Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link>
                         <a href="/#products" onClick={() => setIsMenuOpen(false)}>COLLECTION</a>
-                        <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+                        <Link to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT</Link>
                         <Link to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link>
                     </div>
                     <div className="nav-mobile-footer">

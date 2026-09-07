@@ -29,7 +29,7 @@ const features = [
         title: "Protection",
         description: "Shields against UV rays, pollution, and harmful environmental factors, maintaining skin health.",
         icon: (
-            <img src={aboutImg3} alt="protection" />
+            <img src={aboutImg3} alt="Protection" />
         )
     },
     {
@@ -37,7 +37,7 @@ const features = [
         title: "Exfoliation",
         description: "Removes dead cells, promoting cell turnover for a fresh, radiant complexion.",
         icon: (
-            <img src={aboutImg4} alt="exfoliation" />
+            <img src={aboutImg4} alt="Exfoliation" />
         )
     }
 ];
@@ -47,7 +47,7 @@ const HealthySkin = () => {
         <section className="healthy-skin-section">
             <div className="container healthy-skin-container">
                 <div className="healthy-skin-content fade-in">
-                    <h2 className="serif">Healthy skin</h2>
+                    <h2 className="serif">Healthy Skin</h2>
                     <p className="main-description">
                         Healthy skin is well-hydrated, smooth, evenly toned, resilient, free from
                         irritation or blemishes, and has a natural, radiant glow.

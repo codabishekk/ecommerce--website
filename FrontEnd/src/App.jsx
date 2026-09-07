@@ -134,11 +134,12 @@ function App() {
             {/* Storefront Routes */}
             <Route path="/" element={
               <>
+                <h1 className="sr-only">Sholash Life Science – Scientific Skincare</h1>
                 <div id="home">
                   <HeroCarousel />
                 </div>
                 <BrandSection />
-                <OurProducts searchQuery={searchQuery} />
+                <OurProducts searchQuery={searchQuery} onAddToCart={handleAddToCart} onBuyClick={handleBuyClick} />
                 <div id="skin-types">
                   <SkinTypes />
                 </div>

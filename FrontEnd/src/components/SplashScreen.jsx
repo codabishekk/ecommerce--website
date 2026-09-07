@@ -21,11 +21,11 @@ const SplashScreen = ({ onComplete }) => {
         <div className={`splash-screen ${isVisible ? 'visible' : 'exit'}`}>
             <div className="splash-content">
                 <div className="splash-logo-container">
-                    <img src={logo} alt="Sholash" className="splash-s-logo" />
+                    <img src={logo} alt="Sholash Life Science" className="splash-s-logo" />
                 </div>
                 
                 <div className="splash-branding">
-                    <h1 className="splash-brand-name">Sholash</h1>
+                    <h1 className="splash-brand-name">Sholash Life Science</h1>
                     <p className="splash-brand-tagline">The Science of Glowing Skin</p>
                 </div>
 

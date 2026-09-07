@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "node --test tests/ai.test.js",
-    "build": "echo 'Starting frontend build...' && cd ../FrontEnd && echo 'Installing dependencies...' && NODE_OPTIONS=--max-old-space-size=512 npm install && echo 'Running build...' && npm run build && echo 'Build completed successfully'",
+    "build": "echo 'Starting frontend build...' && cd ../FrontEnd && echo 'Installing dependencies...' && cross-env NODE_OPTIONS=--max-old-space-size=512 npm install && echo 'Running build...' && npm run build && echo 'Build completed successfully'",
     "ingest:knowledge": "node scripts/ingestKnowledge.js",
-    "postinstall": "echo 'Running postinstall build...' && npm run build",
     "start": "concurrently \"node server.js\" \"node otp-server.js\"",
     "start:api": "node server.js",
     "start:otp": "node otp-server.js",
@@ -24,7 +23,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "express-rate-limit": "^8.3.1",
+    "express-rate-limit": "^8.6.2",
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.3.0",
@@ -34,6 +33,7 @@
     "openai": "^7.4.0"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.14",
     "supertest": "^7.2.2"
   }

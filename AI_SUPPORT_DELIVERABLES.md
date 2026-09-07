@@ -1,6 +1,6 @@
 # AI Customer Support Agent — Deliverables
 
-**Project:** Sholash Life Science (MERN e-commerce)
+**Project:** Skin Care Product (MERN e-commerce)
 **Type:** AI-powered customer support integration (production-grade)
 **Date:** 13 Aug 2026
 

@@ -55,7 +55,18 @@ const HeroCarousel = () => {
         arrows: false,
         fade: true,
         pauseOnHover: true,
-        cssEase: "linear"
+        cssEase: "linear",
+        afterChange: (current) => {
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.hero-slider .slick-slide').forEach((slide, i) => {
+                    if (i === current) {
+                        slide.removeAttribute('inert');
+                    } else {
+                        slide.setAttribute('inert', '');
+                    }
+                });
+            });
+        }
     };
 
     if (loading || offers.length === 0) {
@@ -90,6 +101,11 @@ const HeroCarousel = () => {
                                 <div className="carousel-text fade-in">
                                     {slide.title && <h1 className="serif">{slide.title}</h1>}
                                     {slide.description && <p className="offer-desc">{slide.description}</p>}
+                                    {/*<div className="hero-cta">
+                                        <button className="btn-primary hero-cta-btn" onClick={(e) => { e.stopPropagation(); scrollToProducts(); }}>
+                                            Shop Collection
+                                        </button>
+                                    </div>*/}
                                 </div>
                             </div>
                         </div>

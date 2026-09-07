@@ -6,7 +6,7 @@ import cleanMarkdown from '../../utils/cleanMarkdown';
 import './AIChatWidget.css';
 
 const WELCOME =
-    "Hi! I am Sholash's AI support assistant. I can answer questions about our policies, find products, and help with your orders. How can I help you today?";
+    "Hi! I am Skin Care's AI support assistant. I can answer questions about our policies, find products, and help with your orders. How can I help you today?";
 
 const QUICK_PROMPTS = [
     'What is your return policy?',
@@ -76,7 +76,7 @@ const AIChatWidget = ({ onAddToCart, onBuyClick, onLoginClick }) => {
                 onClick={() => setOpen((o) => !o)}
                 aria-label={open ? 'Close AI support' : 'Open AI support'}
             >
-                {open ? '✕' : '✦'}
+                <span aria-hidden="true">{open ? '✕' : '✦'}</span>
             </button>
 
             {open && (
@@ -86,7 +86,7 @@ const AIChatWidget = ({ onAddToCart, onBuyClick, onLoginClick }) => {
                             <span className="ai-avatar">✦</span>
                             <div>
                                 <div className="ai-header-name">AI Support</div>
-                                <div className="ai-header-sub">Sholash Life Science</div>
+                                <div className="ai-header-sub">Skin Care Product</div>
                             </div>
                         </div>
                         <button className="ai-close" onClick={() => setOpen(false)} aria-label="Close">

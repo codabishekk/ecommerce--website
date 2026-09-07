@@ -25,9 +25,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
             <div className={styles.brand}>
                 <div className={styles.brandIcon}>
-                    <img src={logo} alt="Sholash Logo" className={styles.logoImg} />
+                    <img src={logo} alt="Skin Care Logo" className={styles.logoImg} />
                 </div>
-                <div className={styles.brandText}>Sholash Admin</div>
+                <div className={styles.brandText}>Skin Care Admin</div>
             </div>
 
             <nav className={styles.nav}>

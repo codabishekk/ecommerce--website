@@ -106,7 +106,7 @@ const ProductCard = ({
                     <div className="product-price">MRP: ₹{price}</div>
 
                     <div className="product-rating">
-                        <span className="star">★</span> {rating}
+                        <span className="star" aria-hidden="true">★</span> {rating}
                         <span className="reviews-count">
                             ({reviewsCount} reviews)
                         </span>
@@ -118,12 +118,12 @@ const ProductCard = ({
                 <p className="product-description">{description}</p>
 
                 <div className="product-footer">
-                    <button className="product-btn btn-buy" onClick={handleBuyClick}>
-                        <span className="btn-icon">⚡</span> BUY
+                    <button className="btn-primary product-btn" onClick={handleBuyClick}>
+                        <span className="btn-icon" aria-hidden="true"></span> BUY
                     </button>
 
-                    <button className="product-btn btn-cart" onClick={handleAddToCartClick}>
-                        <span className="btn-icon">🛒</span> CART
+                    <button className="btn-secondary product-btn" onClick={handleAddToCartClick}>
+                        <span className="btn-icon" aria-hidden="true">🛒</span> CART
                     </button>
                 </div>
             </div>

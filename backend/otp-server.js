@@ -105,25 +105,25 @@ app.post('/api/send-otp/email', async (req, res) => {
     try {
         const transporter = createTransporter();
         await transporter.sendMail({
-            from: `"Sholash Life Science" <${process.env.GMAIL_USER}>`,
+            from: `"Skin Care Life Science" <${process.env.GMAIL_USER}>`,
             to: email,
-            subject: `Your OTP for Sholash — ${otp}`,
+            subject: `Your OTP for Skin Care — ${otp}`,
             html: `
             <div style="font-family:'Segoe UI',sans-serif;max-width:480px;margin:auto;background:#f0fdfa;border-radius:16px;padding:32px;border:1px solid #a7f3d0;">
                 <div style="text-align:center;margin-bottom:24px;">
-                <img src="cid:logo_symbol" alt="Sholash" style="width: 80px; height: auto; display: block; margin: 0 auto;" />
-                <h2 style="color:#065f46;margin:8px 0 0;">Sholash Life Science</h2>
+                <img src="cid:logo_symbol" alt="Skin Care" style="width: 80px; height: auto; display: block; margin: 0 auto;" />
+                <h2 style="color:#065f46;margin:8px 0 0;">Skin Care Life Science</h2>
                 </div>
                 <p style="color:#374151;">Hi <strong>${name || 'there'}</strong>,</p>
                 <p style="color:#374151;">Never share your login credentials with anyone. Your One-Time Password (OTP) is:</p>
-                <p style="color:#374151;">Welcome to Sholash life science join our family for better skin and health , adding a value for your skincare, We noticed a successful login to your account, and we’re glad to have you back! 🎉 </p>
+                <p style="color:#374151;">Welcome to Skin Care life science join our family for better skin and health , adding a value for your skincare, We noticed a successful login to your account, and we’re glad to have you back! 🎉 </p>
                 <p style="color:#374151;">We’re always here to help you have the best shopping experience!</p>
                 <div style="text-align:center;margin:24px 0;">
                 <span style="font-size:42px;font-weight:800;letter-spacing:12px;color:#047857;background:#d1fae5;padding:16px 24px;border-radius:12px;display:inline-block;">${otp}</span>
                 </div>
                 <p style="color:#6b7280;font-size:13px;">Valid for <strong>5 minutes</strong>. Do not share with anyone.</p>
                 <hr style="border:none;border-top:1px solid #d1fae5;margin:24px 0;">
-                <p style="color:#9ca3af;font-size:12px;text-align:center;">© 2025 Sholash Life Science</p>
+                <p style="color:#9ca3af;font-size:12px;text-align:center;">© 2025 Skin Care Life Science</p>
             </div>`,
             attachments: [
                 {
@@ -233,7 +233,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`\n✅ Sholash OTP Server running on http://localhost:${PORT}`);
+    console.log(`\n✅ Skin Care OTP Server running on http://localhost:${PORT}`);
     console.log(`   Email: ${isGmailConfigured() ? '✓ Gmail configured — real emails will be sent' : '⚠  DEV MODE — OTP will be shown in modal (fill .env to send real emails)'}`);
     console.log(`   SMS:   ${isFast2SMSConfigured() ? '✓ Fast2SMS configured — real SMS will be sent' : '⚠  DEV MODE — OTP will be shown in modal (fill .env to send real SMS)\n'}`);
 });

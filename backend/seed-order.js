@@ -41,7 +41,7 @@ const seedAll = async () => {
             category: category._id,
             stock: 50,
             images: ['sample.jpg'],
-            brand: 'Sholash',
+            brand: 'Skin Care',
             isActive: true
         });
 

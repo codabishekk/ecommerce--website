@@ -30,7 +30,7 @@ const About = () => {
                         <h2 className="serif">The Pathway to Naturally Radiant, Healthy, and Glowing Skin</h2>
 
                         <div className="pathway-text">
-                            <p>Sholash Life Sciences' Science of Glowing Skin investigates the intricate biological processes that contribute to a naturally radiant complexion.</p>
+                            <p>Skin Care Product' Science of Glowing Skin investigates the intricate biological processes that contribute to a naturally radiant complexion.</p>
                             <p>Exploring the Science of Radiant, Healthy, and Naturally Glowing Skin for Lasting Beauty and Confidence.</p>
                         </div>
 
@@ -49,7 +49,7 @@ const About = () => {
                             <img src={glazziumImg} alt="Glazzium" />
                             <div className="quote-box">
                                 <span className="quote-icon">“</span>
-                                <p>Sholash science of glowing skin explores the biological processes behind skin radiance, focusing on moisture retention, elasticity, and healthy circulation.</p>
+                                <p>Skin Care science of glowing skin explores the biological processes behind skin radiance, focusing on moisture retention, elasticity, and healthy circulation.</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const About = () => {
 
                     <div className="testimonials-grid">
                         <div className="testimonial-card glass">
-                            <p className="story">"Sholash Life Sciences has truly transformed my skin. It feels healthier, smoother, and glows with natural radiance!"</p>
+                            <p className="story">"Skin Care Product has truly transformed my skin. It feels healthier, smoother, and glows with natural radiance!"</p>
                             <div className="user-profile">
                                 <div className="avatar maria"></div>
                                 <span className="name">Maria</span>
@@ -114,7 +114,7 @@ const About = () => {
                         </div>
 
                         <div className="testimonial-card glass">
-                            <p className="story">"Using Sholash Life Sciences has been a game-changer for my skin! It feels healthier, more radiant, and truly glowing!"</p>
+                            <p className="story">"Using Skin Care Product has been a game-changer for my skin! It feels healthier, more radiant, and truly glowing!"</p>
                             <div className="user-profile">
                                 <div className="avatar jenna"></div>
                                 <span className="name">Jenna</span>
@@ -122,7 +122,7 @@ const About = () => {
                         </div>
 
                         <div className="testimonial-card glass">
-                            <p className="story">"Sholash Life Sciences has completely revitalized my skin. It's clearer, healthier, and naturally glowing. I highly recommend it!"</p>
+                            <p className="story">"Skin Care Product has completely revitalized my skin. It's clearer, healthier, and naturally glowing. I highly recommend it!"</p>
                             <div className="user-profile">
                                 <div className="avatar mark"></div>
                                 <span className="name">Mark</span>

@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import api, { BASE_URL } from '../services/api';
-import { slugify } from '../utils/slugify';
+import ProductCard from './ProductCard';
 import './OurProducts.css';
 
-const OurProducts = ({ searchQuery = '' }) => {
-    const navigate = useNavigate();
-    const sectionRef = useRef(null);
+const OurProducts = ({ searchQuery = '', onAddToCart, onBuyClick }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -34,33 +31,8 @@ const OurProducts = ({ searchQuery = '' }) => {
         fetchProducts();
     }, [searchQuery]);
 
-    useEffect(() => {
-        const cards = sectionRef.current?.querySelectorAll('.our-product-card');
-        if (!cards) return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-
-        cards.forEach((card, index) => {
-            card.style.transitionDelay = `${index * 100}ms`;
-            observer.observe(card);
-        });
-
-        return () => observer.disconnect();
-    }, [products]);
-
     const getImageUrl = (product, hover = false) => {
         const BASE = BASE_URL;
-        // API product: uses images[]
         if (product.images && product.images.length > 0) {
             if (hover && product.hoverImage) {
                 let img = product.hoverImage;
@@ -73,7 +45,6 @@ const OurProducts = ({ searchQuery = '' }) => {
             if (img.startsWith('http')) return img;
             return img.startsWith('/') ? `${BASE}${img}` : `${BASE}/${img}`;
         }
-        // Static product: uses image / hoverImage
         if (hover && product.hoverImage) {
             let img = product.hoverImage;
             img = img.replace(/\\/g, '/');
@@ -97,35 +68,40 @@ const OurProducts = ({ searchQuery = '' }) => {
     }
 
     return (
-        <section id="products" className="products-section our-products-section" ref={sectionRef}>
+        <section id="products" className="products-section our-products-section">
             <div className="container">
-                <h2 className="our-products-title serif">
-                    {searchQuery.trim() === '' ? 'Our Product' : 'Search Results'}
-                </h2>
+                <div className="our-products-header">
+                    <span className="our-products-subtitle">Curated Care</span>
+                    <h2 className="our-products-title serif">
+                        {searchQuery.trim() === '' ? 'Our Products' : 'Search Results'}
+                    </h2>
+                    {searchQuery.trim() === '' && (
+                        <p className="our-products-desc">
+                            Discover our range of dermatologist-tested solutions tailored for your unique skin needs.
+                        </p>
+                    )}
+                </div>
 
                 {products.length > 0 ? (
                     <div className="our-products-grid product-grid">
                         {products.map(product => {
                             const productId = product._id || product.id;
+                            const categoryName = typeof product.category === 'object' ? product.category?.name : product.category;
                             return (
-                                <div
+                                <ProductCard
                                     key={productId}
-                                    className="our-product-card"
-                                    onClick={() => navigate(`/product/${slugify(product.name)}/${productId}`)}
-                                    onMouseEnter={e => {
-                                        const img = e.currentTarget.querySelector('.our-product-image');
-                                        if (img) img.src = getImageUrl(product, true);
-                                    }}
-                                    onMouseLeave={e => {
-                                        const img = e.currentTarget.querySelector('.our-product-image');
-                                        if (img) img.src = getImageUrl(product, false);
-                                    }}
-                                >
-                                    <div className="our-product-image-container">
-                                        <img src={getImageUrl(product)} alt={product.name} className="our-product-image" />
-                                    </div>
-                                    <h3 className="our-product-name">{product.name.split('–')[0]}</h3>
-                                </div>
+                                    id={productId}
+                                    name={product.name}
+                                    description={product.description}
+                                    category={categoryName}
+                                    image={getImageUrl(product)}
+                                    hoverImage={getImageUrl(product, true)}
+                                    price={product.price}
+                                    rating={product.rating}
+                                    reviewsCount={product.numReviews}
+                                    onAddToCart={onAddToCart}
+                                    onBuyClick={onBuyClick}
+                                />
                             );
                         })}
                     </div>
@@ -141,4 +117,3 @@ const OurProducts = ({ searchQuery = '' }) => {
 };
 
 export default OurProducts;
-

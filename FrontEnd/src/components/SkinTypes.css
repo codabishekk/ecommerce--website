@@ -17,7 +17,7 @@
     background: #ffffff;
     padding: 35px 25px;
     text-align: center;
-    border-radius: 18px;
+    border-radius: var(--radius-lg, 18px);
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
     transition: all .35s ease;
@@ -40,13 +40,20 @@
 .skin-type-icon {
     width: 52px;
     height: 52px;
-    border-radius: 14px;
+    border-radius: var(--radius-md, 14px);
     background: #e0f2fe;
     color: #0284c7;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all .3s ease;
+    overflow: hidden;
+}
+
+.skin-type-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .skin-type-card:hover .skin-type-icon {
@@ -58,7 +65,7 @@
 /* Title */
 
 .skin-type-card h3 {
-    font-size: 1.35rem;
+    font-size: var(--text-xl, 1.35rem);
     font-weight: 700;
     color: #0f172a;
     margin: 0;
@@ -67,8 +74,8 @@
 /* Text */
 
 .skin-type-card p {
-    font-size: 0.95rem;
-    color: black;
+    font-size: var(--text-base, 0.95rem);
+    color: var(--color-text-muted);
     line-height: 1.6;
     max-width: 260px;
 }
@@ -95,6 +102,6 @@
     }
 
     .skin-type-card h3 {
-        font-size: 1.1rem;
+        font-size: var(--text-lg, 1.1rem);
     }
 }

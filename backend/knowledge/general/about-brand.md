@@ -1,7 +1,7 @@
-# About Sholash Life Science
+# About Skin Care Product
 
 ## Who we are
-Sholash Life Science is a skincare brand focused on formulating science-backed, effective skincare products. Our mission is to make high-quality skincare accessible to everyone in India.
+Skin Care Product is a skincare brand focused on formulating science-backed, effective skincare products. Our mission is to make high-quality skincare accessible to everyone in India.
 
 ## Our approach
 Our products are developed with a focus on safe, effective ingredients. Each product is designed to target specific skin concerns including pigmentation, dullness, dryness, and signs of ageing.

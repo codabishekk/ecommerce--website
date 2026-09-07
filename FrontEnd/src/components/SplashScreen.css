@@ -22,9 +22,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
-    max-width: 300px;
+    gap: 2rem;
+    max-width: 400px;
     width: 100%;
+    padding: 0 20px;
 }
 
 .splash-logo-container {
@@ -53,19 +54,19 @@
 }
 
 .splash-brand-name {
-    font-family: 'Playfair Display', serif; /* Or system serif if not loaded */
-    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: var(--text-3xl, clamp(1.8rem, 5vw, 2.5rem));
     font-weight: 700;
-    color: #000000;
+    color: #0f172a;
     margin: 0;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 .splash-brand-tagline {
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.85rem;
+    font-size: var(--text-sm, 0.85rem);
     font-weight: 400;
-    color: #94a3b8; /* Light Grey */
+    color: #94a3b8;
     margin-top: 0.5rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -75,7 +76,7 @@
     width: 120px;
     height: 2px;
     background: #f1f5f9;
-    border-radius: 10px;
+    border-radius: var(--radius-pill, 10px);
     overflow: hidden;
     margin-top: 1rem;
     opacity: 0;

@@ -1,7 +1,7 @@
 # Shipping Policy
 
 ## Delivery areas
-Sholash Life Science currently ships to all pin codes across India. We do not ship internationally at this time.
+Skin Care Product currently ships to all pin codes across India. We do not ship internationally at this time.
 
 ## Processing time
 Orders are processed and dispatched within 1-2 working days after the order is placed. Orders placed on weekends or public holidays are dispatched on the next working day.

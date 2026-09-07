@@ -416,6 +416,7 @@
 
 .modalBody {
   padding: 2rem;
+  margin-top: 105px;
 }
 
 /* ─── Form Styles ─────────────────────────────────────────────────────── */
@@ -865,8 +866,13 @@
     align-items: center;
   }
 
-  .statusActiveDot { background-color: var(--admin-success); }
-  .statusInactiveDot { background-color: var(--admin-danger); }
+  .statusActiveDot {
+    background-color: var(--admin-success);
+  }
+
+  .statusInactiveDot {
+    background-color: var(--admin-danger);
+  }
 
   .cardBody {
     display: grid;
@@ -958,7 +964,8 @@
     box-sizing: border-box;
   }
 
-  .modalHeader, .modalFooter {
+  .modalHeader,
+  .modalFooter {
     padding: 1rem 1.25rem;
   }
 
@@ -977,13 +984,14 @@
     gap: 0.75rem;
   }
 
-  .promoFieldsRow > div {
+  .promoFieldsRow>div {
     flex: none !important;
     width: 100%;
   }
 
   .colorInputWrap {
-    flex-direction: row; /* Keep color small */
+    flex-direction: row;
+    /* Keep color small */
     flex-wrap: wrap;
   }
 
@@ -1039,7 +1047,7 @@
   max-width: 100%;
   max-height: 90vh;
   border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   object-fit: contain;
   animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1066,13 +1074,25 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ─── Category Management & Inline Form ──────────────────────────────────── */
@@ -1238,4 +1258,3 @@
   font-size: 0.75rem;
   color: var(--admin-text-muted);
 }
-

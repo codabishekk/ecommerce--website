@@ -8,7 +8,7 @@ const createAdmin = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);
         const admin = await Admin.create({
-            name: 'Sholash Admin',
+            name: 'Skin Care Admin',
             email: 'admin@sholash.com',
             password: 'password123',
             role: 'superadmin'

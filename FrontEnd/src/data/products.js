@@ -107,7 +107,7 @@ export const products = [
                 
             ],
             legal: [
-                { id: 'mfg', title: 'Manufacturer', content: 'Sholash Life Science Pvt. Ltd.' }
+                { id: 'mfg', title: 'Manufacturer', content: 'Skin Care Product Pvt. Ltd.' }
             ]
         }
     },

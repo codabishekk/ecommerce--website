@@ -118,7 +118,7 @@ const Contact = () => {
                             <h3 className="serif">Main Office</h3>
                         </div>
                         <div className="info-body">
-                            <p><strong>Sholash Life Sciences</strong></p>
+                            <p><strong>Skin Care Product</strong></p>
                             <p>First Floor, D.No-2/2, Kilamel Street II , <br />
                                 Lakshmipuram, Ganapathy Post, <br />
                                 Coimbatore -641006.</p>
@@ -152,14 +152,14 @@ const Contact = () => {
                 <div className="container">
                     <div className="map-wrapper glass">
                         <iframe
-                            src="https://www.google.com/maps?q=Sholash+Life+Sciences,+Coimbatore&output=embed"
+                            src="https://www.google.com/maps?q=Skin+Care+Life+Sciences,+Coimbatore&output=embed"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Sholash Life Sciences Location"
+                            title="Skin Care Product Location"
                         ></iframe>
                     </div>
                 </div>

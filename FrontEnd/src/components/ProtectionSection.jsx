@@ -57,7 +57,7 @@ const ProtectionSection = () => {
                 </div>
 
                 <div className="protection-content fade-in">
-                    <h2 className="serif">Oil skin protection</h2>
+                    <h2 className="serif">Oil Skin Protection</h2>
                     <p className="protection-description">
                         Oil skin protection creates a barrier that locks in moisture, prevents
                         dryness, and shields against environmental damage, maintaining
