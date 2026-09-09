@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Footer.css';
-import logo from '../assets/logo/logo.png';
+import logo from '../assets/logo/skin care logo.png';
 
 const Footer = () => {
     const [isSubscribed, setIsSubscribed] = useState(false);
@@ -21,7 +21,7 @@ const Footer = () => {
                     <div className="logo">
                         <img src={logo} alt="Sholash Life Science" className="logo-img" />
                     </div>
-                    <p>Sholash Life Science is dedicated to advancing health through innovative research, quality products, and a commitment to scientific excellence.</p>
+                    <p>Skin care products is dedicated to advancing health through innovative research, quality products, and a commitment to scientific excellence.</p>
                 </div>
                 <div className="footer-links">
                     <div className="link-group">

@@ -2,7 +2,7 @@ import React from 'react';
 import './WhatsAppButton.css';
 
 const WhatsAppButton = () => {
-    const phoneNumber = "9500522551"; // Contact number from site
+    const phoneNumber = "9876543210"; // Contact number from site
     const whatsappLink = `https://wa.me/91${phoneNumber}`;
 
     return (

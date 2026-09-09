@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import './Header.css';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo/logo.png';
+import logo from '../assets/logo/skin care logo.png';
 
 const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
     const navigate = useNavigate();
@@ -45,7 +45,7 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
 
         // If query is empty, just scroll to products regardless
         const element = document.getElementById('products');
-        
+
         if (location.pathname !== '/') {
             navigate('/#products');
             setTimeout(() => {
@@ -57,7 +57,7 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        
+
         // Collapse search on mobile after submission
         if (window.innerWidth <= 768) {
             setIsSearchExpanded(false);
@@ -67,8 +67,8 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
     return (
         <header className={`header glass fade-in ${scrolled ? 'scrolled' : ''}`}>
             <div className="container header-content">
-                <button 
-                    className="menu-toggle" 
+                <button
+                    className="menu-toggle"
                     onClick={() => setIsMenuOpen(true)}
                     aria-label="Open Menu"
                 >
@@ -76,7 +76,7 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
                 </button>
                 <div className="logo">
                     <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                        <img src={logo} alt="Sholash Life Science" className="logo-img" />
+                        <img src={logo} alt="Skin care company" className="logo-img" />
                     </Link>
                 </div>
                 <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
@@ -94,7 +94,7 @@ const Header = ({ cartCount, searchQuery, setSearchQuery, onAuthClick }) => {
                         <Link to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link>
                     </div>
                     <div className="nav-mobile-footer">
-                        <p>Customer Support:<br/><strong>9800322201</strong></p>
+                        <p>Customer Support:<br /><strong>9800322201</strong></p>
                     </div>
                 </nav>
                 <div className="header-actions">

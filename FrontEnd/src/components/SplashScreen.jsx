@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './SplashScreen.css';
-import logo from '../assets/logo/logo_symbol.png';
+import logo from '../assets/logo/skin care logo.png';
 
 const SplashScreen = ({ onComplete }) => {
     const [isVisible, setIsVisible] = useState(true);
@@ -23,10 +23,10 @@ const SplashScreen = ({ onComplete }) => {
                 <div className="splash-logo-container">
                     <img src={logo} alt="Sholash Life Science" className="splash-s-logo" />
                 </div>
-                
+
                 <div className="splash-branding">
-                    <h1 className="splash-brand-name">Sholash Life Science</h1>
-                    <p className="splash-brand-tagline">The Science of Glowing Skin</p>
+                    <h1 className="splash-brand-name">Skin care products</h1>
+                    {/*<p className="splash-brand-tagline">The Beauty & Wellness</p>*/}
                 </div>
 
                 <div className="splash-loading">

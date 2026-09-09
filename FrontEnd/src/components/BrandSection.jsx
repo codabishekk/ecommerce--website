@@ -1,8 +1,8 @@
 import React from 'react';
 import './BrandSection.css';
-import mainImage from '../assets/new images/main image.png';
+import mainImage from '../assets/new images/home.png';
 import mobileImage from '../assets/home img/img3.png';
-import secondaryImage from '../assets/new images/secondary image.png';
+import secondaryImage from '../assets/new images/download.jpg';
 import icons1 from '../assets/ICONS/atom.png';
 import icons2 from '../assets/ICONS/soap.png';
 import icons3 from '../assets/ICONS/flask.png';
@@ -29,7 +29,7 @@ const BrandSection = () => {
                     <span className="brand-badge accent-font">Our Legacy & Science</span>
                     <h2 className="brand-title serif">Science-Backed <span className="text-gradient">Skincare For</span> Real Results</h2>
                     <p className="brand-desc">
-                        At Sholash Life Science, we combine advanced dermatological research with carefully selected ingredients to create skincare that delivers visible, lasting results.
+                        Skin care product, we combine advanced dermatological research with carefully selected ingredients to create skincare that delivers visible, lasting results.
                         Engineered to restore balance, enhance clarity, and support your skin’s  strength.
                     </p>
 
