@@ -32,15 +32,15 @@ app.set('trust proxy', 1);
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://sholash-life-science-1.onrender.com',
-    'https://sholash-life-science.onrender.com',
+    'https://ecommerce-website-979r.onrender.com',
+    'https://ecommerce-website-mu-virid.vercel.app',
 ];
 
 app.use(cors({
     origin: (origin, callback) => {
         // Allow requests with no origin (mobile apps, curl, Postman)
         if (!origin) return callback(null, true);
-        
+
         if (allowedOrigins.includes(origin) || allowedOrigins.includes(origin.replace(/\/$/, ""))) {
             callback(null, true);
         } else {
