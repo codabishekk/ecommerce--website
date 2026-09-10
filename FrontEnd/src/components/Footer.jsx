@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="container">
-                    <p>&copy; 2026 Sholash Life Science. Developed by AIM Universe.</p>
+                    {/*<p>&copy; 2026 Sholash Life Science. Developed by AIM Universe.</p>*/}
                 </div>
             </div>
         </footer>

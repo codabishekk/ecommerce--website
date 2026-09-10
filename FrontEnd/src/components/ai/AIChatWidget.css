@@ -5,7 +5,7 @@
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px;
+    bottom: 100px;
     right: 40px;
     background: var(--gradient-ocean, linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%));
     color: #fff;
@@ -27,7 +27,7 @@
 
 .ai-panel {
     position: fixed;
-    bottom: 112px;
+    bottom: 172px;
     right: 40px;
     width: 390px;
     max-width: calc(100vw - 32px);
@@ -178,7 +178,7 @@
     width: 100%;
 }
 
-.ai-msg-content > * {
+.ai-msg-content>* {
     max-width: 100%;
 }
 
@@ -204,12 +204,27 @@
     animation: ai-blink 1.2s infinite;
 }
 
-.ai-typing span:nth-child(2) { animation-delay: 0.2s; }
-.ai-typing span:nth-child(3) { animation-delay: 0.4s; }
+.ai-typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ai-typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
 
 @keyframes ai-blink {
-    0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
-    30% { opacity: 1; transform: translateY(-3px); }
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.25;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
 }
 
 .ai-quick {
@@ -518,15 +533,39 @@
     gap: 8px;
 }
 
-.ai-btn {
+.ai-confirm-actions .ai-btn {
     flex: 1;
+    height: auto;
+    min-height: 36px;
+    padding: 9px 14px;
+    font-size: 13px;
+}
+
+.ai-btn {
+    flex: none;
     border: none;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
     border-radius: var(--radius-pill, 999px);
-    padding: 9px 12px;
+    padding: 0 18px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-login-prompt .ai-btn {
+    flex: 0 0 auto;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    line-height: 30px;
 }
 
 .ai-btn-primary {
@@ -576,13 +615,13 @@
     .ai-float {
         width: 52px;
         height: 52px;
-        bottom: 24px;
+        bottom: 84px;
         right: 20px;
         font-size: 20px;
     }
 
     .ai-panel {
-        bottom: 88px;
+        bottom: 148px;
         right: 16px;
         width: calc(100vw - 32px);
         height: min(560px, calc(100vh - 120px));

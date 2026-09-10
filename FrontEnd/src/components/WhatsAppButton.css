@@ -2,7 +2,7 @@
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 120px;
+    bottom: 180px;
     right: 40px;
     background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
     color: #FFF;
@@ -47,7 +47,7 @@
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        bottom: 92px;
+        bottom: 152px;
         right: 20px;
     }
 
@@ -59,7 +59,7 @@
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        bottom: 80px;
+        bottom: 140px;
         right: 15px;
     }
 }

@@ -41,7 +41,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 24px;
-    justify-items: center;
+    justify-items: stretch;
+    width: 100%;
 }
 
 .no-results h3 {
@@ -56,7 +57,9 @@
 
 @media (max-width: 992px) {
     .our-products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        justify-items: stretch;
     }
 }
 
@@ -66,8 +69,10 @@
     }
 
     .our-products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        justify-items: stretch;
+        width: 100%;
     }
 
     .our-products-title {
