@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { UserContext } from '../context/UserContext';
 import { BASE_URL } from '../services/api';
-import logo from '../assets/logo/logo.png';
+import logo from '../assets/logo/skin care logo.png';
 import './AuthModal.css';
 
 const API_URL = `${BASE_URL}/api/users`;
@@ -10,7 +10,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
     // ─── View Views ───────────────────────────────────────────────────────────
     // 'IDENTIFY', 'LOGIN', 'REGISTER', 'VERIFY_REG', 'FORGOT_EMAIL', 'FORGOT_RESET'
     const [view, setView] = useState('IDENTIFY');
-    
+
     // ─── Form State ───────────────────────────────────────────────────────────
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [otpDigits, setOtpDigits] = useState(['', '', '', '', '', '']);
     const [newPassword, setNewPassword] = useState('');
-    
+
     // ─── UI State ─────────────────────────────────────────────────────────────
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
@@ -135,7 +135,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
         e.preventDefault();
         setError('');
         if (!password) return setError('Please enter your password.');
-        
+
         setLoading(true);
         try {
             const res = await fetch(`${API_URL}/login`, {
@@ -276,11 +276,11 @@ const AuthModal = ({ isOpen, onClose, product }) => {
     };
 
     const onAuthSuccess = (data) => {
-        login({ 
-            _id: data._id, 
-            name: data.name, 
+        login({
+            _id: data._id,
+            name: data.name,
             contact: data.email,
-            token: data.token 
+            token: data.token
         });
         setTimeout(() => onClose(), 1500);
     };
@@ -342,7 +342,7 @@ const AuthModal = ({ isOpen, onClose, product }) => {
                                     <p className="auth-footer-text" style={{ textAlign: 'left', marginTop: '15px', color: '#555' }}>
                                         By continuing, you agree to Skin Care's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
                                     </p>
-                                    
+
                                     <div className="auth-footer-divider" data-text="New to Skin Care?"></div>
                                     <button className="auth-btn-sec" onClick={() => setView('REGISTER')}>Create your Skin Care account</button>
                                 </div>
@@ -423,8 +423,8 @@ const AuthModal = ({ isOpen, onClose, product }) => {
                                         {loading ? <span className="auth-spinner" /> : 'Create your Skin Care account'}
                                     </button>
                                     <div className="auth-resend-row">
-                                        {timer > 0 ? <span className="auth-timer">Resend OTP in {timer}s</span> : 
-                                        <button className="auth-btn-resend" onClick={handleRequestRegister}>Resend OTP</button>}
+                                        {timer > 0 ? <span className="auth-timer">Resend OTP in {timer}s</span> :
+                                            <button className="auth-btn-resend" onClick={handleRequestRegister}>Resend OTP</button>}
                                     </div>
                                     <button className="auth-btn-back" onClick={() => setView('REGISTER')}>← Change Details</button>
                                 </div>
@@ -474,15 +474,15 @@ const AuthModal = ({ isOpen, onClose, product }) => {
                                         <button type="submit" className="auth-btn-primary" disabled={loading}>{loading ? <span className="auth-spinner" /> : 'Save and Sign in'}</button>
                                     </form>
                                     <div className="auth-resend-row" style={{ marginTop: '10px' }}>
-                                        {timer > 0 ? <span className="auth-timer">Resend OTP in {timer}s</span> : 
-                                        <button className="auth-btn-resend" onClick={handleRequestReset}>Resend OTP</button>}
+                                        {timer > 0 ? <span className="auth-timer">Resend OTP in {timer}s</span> :
+                                            <button className="auth-btn-resend" onClick={handleRequestReset}>Resend OTP</button>}
                                     </div>
                                 </div>
                             </>
                         )}
                     </>
                 )}
-                
+
                 {/* Step indicator dots */}
                 <div className="auth-step-dots" style={{ marginTop: '20px' }}>
                     <span className={`auth-dot ${view === 'IDENTIFY' || view === 'REGISTER' || view === 'FORGOT_EMAIL' ? 'active shadow' : ''}`}></span>

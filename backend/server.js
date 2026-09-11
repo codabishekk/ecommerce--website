@@ -103,6 +103,22 @@ app.get("/", (req, res) => {
     res.json({ success: true, message: "Skin Care Product API is running 🚀" });
 });
 
+// ─── Service Health (public) ──────────────────────────────────────────────────
+app.get("/api/health", (req, res) => {
+    const GMAIL_PLACEHOLDERS = new Set(['your_email@gmail.com', 'your_16_char_app_password', '/* secret */']);
+    const isGmailConfigured = () =>
+        !!process.env.GMAIL_USER && !GMAIL_PLACEHOLDERS.has(process.env.GMAIL_USER) &&
+        !!process.env.GMAIL_APP_PASSWORD && !GMAIL_PLACEHOLDERS.has(process.env.GMAIL_APP_PASSWORD);
+    const isFast2SMSConfigured = () =>
+        !!process.env.FAST2SMS_API_KEY && process.env.FAST2SMS_API_KEY !== 'your_fast2sms_api_key';
+
+    res.json({
+        status: 'ok',
+        email: isGmailConfigured() ? 'configured' : 'dev-mode',
+        sms: isFast2SMSConfigured() ? 'configured' : 'dev-mode'
+    });
+});
+
 // ─── Routes ───────────────────────────────────────────────────────────────────
 app.use("/api/admin", authRoutes);
 app.use("/api/admin", adminRoutes);

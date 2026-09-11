@@ -2,7 +2,7 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const axios = require("axios");
 
-const OTP_SERVER = process.env.OTP_SERVER_URL || 'http://127.0.0.1:4001/api';
+const OTP_SERVER = process.env.OTP_SERVER_URL || `http://127.0.0.1:${process.env.OTP_PORT || 4001}/api`;
 
 // Generate JWT
 const generateToken = (id) => {

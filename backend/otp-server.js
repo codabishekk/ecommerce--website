@@ -12,7 +12,7 @@ if (dns.setDefaultResultOrder) {
 }
 
 const app = express();
-const PORT = process.env.OTP_PORT || 4000;
+const PORT = process.env.OTP_PORT || 4001;
 
 console.log("EMAIL:", process.env.GMAIL_USER);
 
@@ -93,6 +93,13 @@ app.post('/api/send-otp/email', async (req, res) => {
 
     // ── DEV MODE: credentials not configured, return OTP in response ──
     if (!isGmailConfigured()) {
+        if (process.env.NODE_ENV === 'production') {
+            console.error(`[OTP] Gmail not configured on this server. Cannot send OTP to ${email}`);
+            return res.status(500).json({
+                success: false,
+                message: 'Email service is not configured. Contact the administrator.'
+            });
+        }
         console.log(`[DEV MODE] Email OTP for ${email}: ${otp}`);
         return res.json({
             success: true,
@@ -144,6 +151,14 @@ app.post('/api/send-otp/email', async (req, res) => {
             hint = 'Gmail rejected the password. Use an App Password (not your normal Gmail password).';
         } else if (err.message.includes('ECONNREFUSED')) {
             hint = 'Cannot connect to Gmail SMTP.';
+        }
+
+        if (process.env.NODE_ENV === 'production') {
+            console.error(`[OTP] Email delivery failed for ${email}: ${hint}`);
+            return res.status(500).json({
+                success: false,
+                message: `Email could not be sent: ${hint}`
+            });
         }
 
         console.error(`[OTP] Falling back to dev mode for ${email}: ${otp}`);
