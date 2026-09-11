@@ -116,7 +116,7 @@ app.post('/api/send-otp/email', async (req, res) => {
             html: `
             <div style="font-family:'Segoe UI',sans-serif;max-width:480px;margin:auto;background:#f0fdfa;border-radius:16px;padding:32px;border:1px solid #a7f3d0;">
                 <div style="text-align:center;margin-bottom:24px;">
-                <img src="cid:logo_symbol" alt="Skin Care" style="width: 80px; height: auto; display: block; margin: 0 auto;" />
+                <img src="cid:skin care logo" alt="Skin Care" style="width: 80px; height: auto; display: block; margin: 0 auto;" />
                 <h2 style="color:#065f46;margin:8px 0 0;">Skin Care Life Science</h2>
                 </div>
                 <p style="color:#374151;">Hi <strong>${name || 'there'}</strong>,</p>
@@ -132,9 +132,9 @@ app.post('/api/send-otp/email', async (req, res) => {
             </div>`,
             attachments: [
                 {
-                    filename: 'logo_symbol.png',
-                    path: path.join(__dirname, '../FrontEnd/src/assets/logo/logo_symbol.png'),
-                    cid: 'logo_symbol'
+                    filename: 'skin carelogo.png',
+                    path: path.join(__dirname, '../FrontEnd/src/assets/logo/skin care logo.png'),
+                    cid: 'skin care logo'
                 }
             ]
         });
