@@ -66,9 +66,9 @@ const sendOrderEmail = async (userEmail, userName, orderId, status, extraData = 
             html: html,
             attachments: [
                 {
-                    filename: 'logo_symbol.png',
-                    path: path.join(__dirname, '../../FrontEnd/src/assets/logo/logo_symbol.png'),
-                    cid: 'logo_symbol'
+                    filename: 'skin care logo.png',
+                    path: path.join(__dirname, '../../FrontEnd/src/assets/logo/skin care logo.png'),
+                    cid: 'skin care logo'
                 }
             ]
         });

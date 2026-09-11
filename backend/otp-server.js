@@ -19,8 +19,8 @@ console.log("EMAIL:", process.env.GMAIL_USER);
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://sholash-life-science-1.onrender.com',
-    'https://sholash-life-science.onrender.com',
+    'https://ecommerce-website-979r.onrender.com',
+    'https://ecommerce-website-mu-virid.vercel.app',
 ];
 
 app.use(cors({
@@ -64,12 +64,12 @@ const createTransporter = () => nodemailer.createTransport({
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD
     },
-    tls: { 
+    tls: {
         rejectUnauthorized: false,
         family: 4 // Ensure TLS tries IPv4
     },
     family: 4, // Force IPv4 globally for this transporter
-    connectionTimeout: 10000, 
+    connectionTimeout: 10000,
     greetingTimeout: 10000,
     pool: true,
     maxConnections: 3,
