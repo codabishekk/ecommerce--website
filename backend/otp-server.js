@@ -71,8 +71,6 @@ const createTransporter = () => nodemailer.createTransport({
     family: 4, // Force IPv4 globally for this transporter
     connectionTimeout: 10000,
     greetingTimeout: 10000,
-    pool: true,
-    maxConnections: 3,
     // Debug logging prints the SMTP AUTH payload (which contains the password).
     // Keep it disabled in production.
     ...(process.env.NODE_ENV === 'production'
